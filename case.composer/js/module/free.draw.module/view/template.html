@@ -1,0 +1,32 @@
+<script id="free-draw-module" type="text/x-handlebars-template">
+
+	<div  data-step="2" data-intro="Click vào icon toggle để tắt mở chức năng free draw" class="panel panel-default" id="free-draw-module-wrapper">
+		<div class="panel-heading">
+				<span><i class="ion-paintbrush size-18"></i> Free draw</span>
+				<div class="draw-mode pull-right">
+					<span class="size-24 "><i class="ion-toggle-filled"></i></span>
+				</div> 
+		</div>
+		<div class="panel-body" style="position:relative">
+			<div class="metarial"></div>
+			<div class="xs-col-12">
+				<button class="button" data-type="Pencil">
+					<i class="ion-paintbrush"></i></button>
+				<button class="button " data-type="Spray">
+					<i class="fa fa-fire-extinguisher"></i></button>
+				<button class="button" data-type="Circle">
+					<i class="ion-ios-circle-filled"></i></button>
+				<input type="color" value="#005E7A" id="drawing-color">
+			</div>
+			<div class="xs-col-12">
+				<br>
+				<div>
+					<label>Width </label>
+					<span class="info">12px</span>
+					<input type="range" value="12" min="0" max="150" id="drawing-line-width">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</script>

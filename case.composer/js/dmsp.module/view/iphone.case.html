@@ -1,0 +1,23 @@
+<script id="template-module" type="text/x-handlebars-template">
+<div class="my-block">
+	<span class="title-style-1">{{title}}</span>
+	<div class="" style="padding:10px">
+		{{#each data}}
+			<div class="media item-danhmuc" data-id = {{this.id}}>
+			  <div class="media-left">
+			    <a href="#">
+			      <img style="width:64px;height:64px" class="media-object" src="{{this.thumb}}">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading">{{this.ten_vi}}</h4>
+			    <a href="#" class="btn btn-default" title="">Start now</a>
+			  </div>
+			</div>
+		{{/each}}
+	</div>
+	<span>
+		<a href="sanpham.html#!cate={{this.cateId}}" title="">Xem tất cả sản phẩm...</a>
+	</span>
+</div>
+</script>

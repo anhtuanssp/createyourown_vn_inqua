@@ -1,0 +1,30 @@
+<script id="control-template-module" type="text/x-handlebars-template">
+	<div class="panel panel-default">
+		<div class="panel-heading">{{title}}</div>
+		<div class="panel-body">
+			<div class="item {{zoom.class}}">
+				
+				<span class="btn btn-default btn-tron zoom-out">
+					<i class="fa fa-minus"></i>
+				</span>
+				{{zoom.title}}
+				<span class="btn btn-default btn-tron zoom-in" data-number="0">
+					<i class="fa fa-plus"></i>
+				</span>
+
+			</div>
+			<hr>
+			<div class="item {{rotate.class}}">
+
+				<span class="btn btn-default btn-tron rotate-left">
+					<i class="fa fa-minus"></i>
+				</span>
+				{{rotate.title}}
+				<span class="btn btn-default btn-tron rotate-right">
+					<i class="fa fa-plus"></i>
+				</span>
+
+			</div>
+		</div>
+	</div>
+</script>

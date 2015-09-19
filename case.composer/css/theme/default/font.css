@@ -1,0 +1,53 @@
+/**
+ * TFPironv2-stencil.otf
+ */
+@font-face { font-family: TFPironv2; src: url('../../../fonts/TFPironv2-stencil.otf'); }
+
+@font-face { font-family: glideSketchSketch; src: url('../../../fonts/glide_sketch_sketch.otf'); }
+
+@font-face { font-family: Perfograma; src: url('../../../fonts/Perfograma.otf'); }
+
+@font-face { font-family: QuadLight; src: url('../../../fonts/Quad Light.otf'); }
+
+@font-face { font-family: QuadUltra; src: url('../../../fonts/Quad Ultra.otf'); }
+
+@font-face { font-family: DJGROSS; src: url('../../../fonts/DJGROSS.ttf'); }
+
+@font-face { font-family: adrip1; src: url('../../../fonts/adrip1.ttf'); }
+
+@font-face { font-family: Brock Vandalo; src: url('../../../fonts/Brock Vandalo.ttf'); }
+
+@font-face { font-family: JEMBOhands; src: url('../../../fonts/JEMBOhands.ttf'); }
+
+@font-face { font-family: NineteenOhFive; src: url('../../../fonts/NineteenOhFive.ttf'); }
+
+@font-face { font-family: Pony; src: url('../../../fonts/Pony.ttf'); }
+
+@font-face { font-family: Nabila; src: url('../../../fonts/Nabila.ttf'); }
+
+@font-face { font-family: iCielAmerigraf; src: url('../../../fonts/iCielAmerigraf.ttf'); }
+
+@font-face { font-family: AROLY; src: url('../../../fonts/AROLY.ttf'); }
+
+@font-face { font-family: UVF Yummy Cupcakes; src: url('../../../fonts/UVF Yummy Cupcakes.otf'); }
+
+@font-face { font-family: SVN-Aaron Script; src: url('../../../fonts/SVN-Aaron Script.otf'); }
+@font-face { font-family: SVN-Snell Roundhand Script; src: url('../../../fonts/SVN-Snell Roundhand Script.ttf'); }
+@font-face { font-family: VL_Tinta-Script; src: url('../../../fonts/VL_Tinta-Script.otf'); }
+@font-face { font-family: Hipsteria; src: url('../../../fonts/Hipsteria.ttf'); }
+
+@font-face{font-family:DTV-DIN;font-weight:400;font-style:normal;
+	src:url(../../../fonts/DINWeb.eot);
+	src:url(../../../fonts/DINWeb.eot?#iefix) format('embedded-opentype'),
+		url(../../../fonts/DINWeb.woff) format('woff')}
+
+@font-face{font-family:DTV-DIN;font-weight:700;font-style:normal;
+	src:url(../../../fonts/DINWeb-Bold.eot);
+	src:url../../../fonts/(DINWeb-Bold.eot?#iefix) format('embedded-opentype'),
+		url(../../../fonts/DINWeb-Bold.woff) format('woff')}
+
+@font-face{font-family:DTV-DIN-BOLD;font-weight:400;font-style:normal;
+	src:url(../../../fonts/DINWeb-Bold.eot);
+	src:url(../../../fonts/DINWeb-Bold.eot?#iefix) format('embedded-opentype'),
+		url(../../../fonts/DINWeb-Bold.woff) format('woff')}
+		
