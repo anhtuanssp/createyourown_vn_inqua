@@ -655,6 +655,7 @@
 
 			MYLIB.REMOVE_LOADING();
 			_this.loadTemplateToCanvas();
+			_this.loadAssetMediaByList();
 		});
 
 		if(this.hasBack){
@@ -1305,7 +1306,29 @@
 		return result;
 
 	}
+	CP.MainCanvas.prototype.loadAssetMediaByList = function(){
+		var that = this;
+		var asmParam = MYLIB.getParamURL('assetmedia');
+		// console.log(asmParam);
+		if(asmParam != ""){
+			CP.AssetsSerice.getInstance.getAssetsMediaByIds(asmParam).done(function(res){
+				$.each(res, function(index, val) {
+					MYLIB.LOADING();
+					// console.log(that.data);
+					var source = MYLIB.IMAGEHOST+val.photo;
+					var id = val.id;
+					var thumb = val.thumb;
+					MYLIB.convertImgToBase64(source,function (basce64){
+						MYLIB.REMOVE_LOADING();
+						// MYLIB.eventManager.fireEvent(that,MYLIB.eventNames.event_upload_from_computer,basce64);
+						MYLIB.eventManager.fireEvent(that,MYLIB.eventNames.event_upload_from_asset,
+							{src : basce64, id : id,thumb : thumb});
 
+					} );
+				});
+			})
+		}
+	}
 	CP.MainCanvas.prototype.loadTemplateToCanvas = function(event){
 		var that = this;
 		// CHECK COI CO PHAI LA SAN PHAM CO TEMPLATE
