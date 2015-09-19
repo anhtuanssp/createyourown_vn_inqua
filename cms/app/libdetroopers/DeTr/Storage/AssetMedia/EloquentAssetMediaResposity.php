@@ -15,6 +15,9 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 	public function paginateAssetMedia($num){
 		return Assetmedia::orderBy('id', 'desc')->paginate($num);
 	}
+	public function paginateAssetMediaOrderByLuotXem($num){
+		return Assetmedia::orderBy('luotxem', 'desc')->paginate($num);
+	}
 	public function searchAssetMedia($str,$cate,$numPagi){
 
 		if ($cate!=0) {

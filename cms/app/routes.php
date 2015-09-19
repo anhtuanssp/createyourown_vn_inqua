@@ -141,8 +141,8 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.api_v1','after' =>'co
     Route::resource('getAllProductAllHome', 'apiv1\ApiProductController@productsOnHome');
     
     Route::resource('getAssetMediaByCate', 'apiv1\ApiAssetMediaController@getAssetMediaByCate');
-
     Route::resource('getCateAssetMedia', 'apiv1\ApiAssetMediaController@cates');
+    Route::resource('getAssetMediaByLimit','apiv1\ApiAssetMediaController@getAssetMediaByLimit');
 
     Route::resource('orders', 'ApiOrdersController');
     Route::resource('createOrder', 'apiv1\ApiOrdersController@create');
@@ -175,7 +175,6 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.api_v1','after' =>'co
 // SERECT
 Route::group(array('prefix' => 'serect'), function()
 {
-
 	Route::get('/asset-media', 'quanly\AdminSerectController@index');
 	Route::post('/asset-media/storage', 'quanly\AdminSerectController@storage');
 
