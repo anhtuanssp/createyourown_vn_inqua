@@ -26,14 +26,6 @@
 		}, 1000);
 	}
 
-	MYLIB.LOADING_WITH_EL = function ($el){
-		if(!MYLIB.$loading){
-			MYLIB.$loading = $('<div class="overlay-loading"></div>');
-		}
-		$el.append(MYLIB.$loading);
-		
-	}
-
 	MYLIB.LOADING_LITTLE = function ($el,msg){
 		if(!MYLIB.$loading_little){
 			MYLIB.$loading_little = $('<div class="loading_little"><img src="imgs/theme/spin.svg"/>'+msg+'<div>');

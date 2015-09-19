@@ -98,8 +98,7 @@
 		getProductRelateByID : 'getProductRelateByID',
 		fakeServiceTest1 : 'fakeServiceTest1',
 		getUserProfile : 'getUserProfile',
-		updateProfileUser : 'updateProfileUser',
-		getAssetMediaByLimit : 'getAssetMediaByLimit'
+		updateProfileUser : 'updateProfileUser'
 	}
 	//namespace
 	MYLIB.namespace('CP');
