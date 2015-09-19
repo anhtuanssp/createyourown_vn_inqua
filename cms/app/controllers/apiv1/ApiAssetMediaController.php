@@ -59,4 +59,9 @@ class ApiAssetMediaController extends BaseController {
 		return Response::json($asLimit, 200);
 	}
 
+	public function getAssetsMediaByIds(){
+		$p = Input::all();
+		$resutl = $this->assetMedia->getAssetMediaByListID($p["data"]);
+		return Response::json($resutl,200);
+	}
 }

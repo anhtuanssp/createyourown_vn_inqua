@@ -49,4 +49,12 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 		Assetmedia::destroy($id);
 		return true;
 	}
+
+	public function getAssetMediaByListID($aids){
+		$arrayId = explode(',', $aids);
+		// dd($arrayId);
+		return Assetmedia::whereIn('id',$arrayId )->get();
+
+	}
+
 }

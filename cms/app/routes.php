@@ -143,6 +143,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.api_v1','after' =>'co
     Route::resource('getAssetMediaByCate', 'apiv1\ApiAssetMediaController@getAssetMediaByCate');
     Route::resource('getCateAssetMedia', 'apiv1\ApiAssetMediaController@cates');
     Route::resource('getAssetMediaByLimit','apiv1\ApiAssetMediaController@getAssetMediaByLimit');
+    Route::resource('getAssetsMediaByIds','apiv1\ApiAssetMediaController@getAssetsMediaByIds');
 
     Route::resource('orders', 'ApiOrdersController');
     Route::resource('createOrder', 'apiv1\ApiOrdersController@create');

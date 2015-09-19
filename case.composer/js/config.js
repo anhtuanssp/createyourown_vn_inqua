@@ -99,7 +99,8 @@
 		fakeServiceTest1 : 'fakeServiceTest1',
 		getUserProfile : 'getUserProfile',
 		updateProfileUser : 'updateProfileUser',
-		getAssetMediaByLimit : 'getAssetMediaByLimit'
+		getAssetMediaByLimit : 'getAssetMediaByLimit',
+		getAssetsMediaByIds  : 'getAssetsMediaByIds'
 	}
 	//namespace
 	MYLIB.namespace('CP');
