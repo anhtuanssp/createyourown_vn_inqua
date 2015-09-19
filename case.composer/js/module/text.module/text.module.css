@@ -1,0 +1,16 @@
+div#text-module {
+    /*padding: 10px 0px 10px 0px;*/
+    margin-top: 10px
+}
+
+input#form-text {
+    width: 80%;
+    height: 35px;
+}
+
+#submit-form-text {
+	position: absolute;
+	padding: 10px;
+	border-radius: 50%;
+	width: 40px;
+}

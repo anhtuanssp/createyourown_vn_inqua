@@ -1,0 +1,45 @@
+#support-center{
+	min-height: 300px;
+	padding: 10px
+}
+#support-center .left-support{
+	width: 28%;
+	/*background: red;*/
+	min-height: 500px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 10px
+}
+#support-center .right-support{
+	width: 70%;
+	/*background: red;*/
+	border: 1px solid #ccc;
+	min-height: 500px;
+	padding: 10px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+/*LEFT*/
+#support-center .left-support{
+
+}
+#support-center .left-support li {
+	cursor: pointer;
+	position: relative;
+}
+#support-center .left-support li:hover{
+	background: #ccc;
+}
+#support-center .left-support li:after{
+	content: '>';
+	position: absolute;
+	color: red;
+	right: 10px
+}
+#support-center .left-support li.active{
+	background: #ccc;
+	border: none;
+}
