@@ -1,0 +1,27 @@
+<script id="template-module" type="text/x-handlebars-template">
+
+<div>
+{{#each data}}
+	<div class="my-block">
+		<span class="title-style-1">{{this.ten_vi}}</span>
+		<div class="" style="padding:10px">
+		
+				<div class="khung-anh">
+					<img src="{{this.thumb}}" alt="" class="img-responsive">
+				</div>
+				<div class="meta-btn">
+					<button type="button"
+						data-id="{{this.id}}" data-isDesign = {{this.isDesign}}
+						data-case="{{this.isCase}}" data-skin = {{this.isSkin}}
+						data-slug= "{{this.slug_vi}}"
+						class="btn btn-default btn-go-degsing">Design now</button>
+				</div>
+
+
+		</div>
+	</div>
+{{/each}}
+</div>
+
+
+</script>

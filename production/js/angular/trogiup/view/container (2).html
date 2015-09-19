@@ -1,0 +1,22 @@
+<div class="left-support">
+	<span class="title-style-1">Trợ giúp</span>
+	<ul class="list-group support-ul">
+
+		<li ng-repeat="value in lisTrogiup" class="list-group-item {{value.slug_vi  == id ? 'active' : ''}}" 
+			data-id={{value.id}}  ng-click="redriectContent(value.slug_vi)">
+			{{value.ten_vi}}
+		</li>
+
+
+	</ul>
+</div>
+<div class="right-support">
+	<span class="title-style-1"><b>Nội dung</b></span>
+	<div class="content-support">
+		<h3>{{title}}</h3>
+		<div class="content-support-text" >
+			<div ng-bind-html="content"></div>
+		</div>
+
+	</div>
+</div>

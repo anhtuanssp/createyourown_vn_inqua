@@ -1,0 +1,9 @@
+[26-Jun-2015 17:04:18 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/inqua/public_html/cms/vendor/laravel/framework/src/Illuminate/Support/helpers.php on line 426
+[30-Aug-2015 07:14:07 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/inqua/public_html/cms/app/libdetroopers/DeTr/StorageServiceProvider.php on line 47
+[30-Aug-2015 07:41:32 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 40
+[30-Aug-2015 07:44:50 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21
+[30-Aug-2015 07:45:28 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21
+[30-Aug-2015 07:50:03 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21
+[30-Aug-2015 07:51:03 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21
+[30-Aug-2015 07:52:13 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21
+[30-Aug-2015 07:53:40 UTC] PHP Fatal error:  Class 'Facebooktracking' not found in /home/inqua/public_html/cms/app/controllers/apiv1/ApiTrackingFacebookController.php on line 21

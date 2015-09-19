@@ -1,0 +1,39 @@
+.my-block {
+	max-width: 300px;
+	display: inline-block;
+	min-width: 250px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+	vertical-align: top;
+	min-height: 340px;
+	margin: 10px;
+	/*border: 1px solid #c9c9c9;*/
+	background: #fff;
+	position: relative;
+}
+.my-block .khung-anh{
+	width: 95%;
+	margin: 0 auto;
+	min-height: 240px;
+	max-height: 240px;
+	/*background: red;*/
+	padding: 10px;
+	box-sizing : border-box;
+	-webkit-box-sizing : border-box;
+}
+.my-block img{
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+}
+.my-block .small-sologan{
+	display: block;
+	padding: 10px
+}
+
+.show-case {
+	text-align: center;
+	margin-top: 10px;
+	background: url('../../../imgs/theme/sativa.png');
+	padding: 25px;
+	min-height: 400px
+}

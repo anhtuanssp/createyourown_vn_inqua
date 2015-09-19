@@ -1,0 +1,53 @@
+#profile{
+	min-height: 500px;
+	margin-top:5px
+}
+#profile .container_CP{
+	min-height: 500px;
+}
+
+#profile .profile-info{
+	width : 40%;
+	display: inline-block;
+}
+
+#profile .profile-info .profile-imgs-wrapper{
+	margin : 10px;
+}
+#profile .profile-info .profile-form-edit{
+	margin : 10px;
+}
+#profile .profile-info .profile-form-edit .profile-form-element{
+	margin-bottom: 10px;
+}
+
+#profile .profile-info .profile-imgs-wrapper .profile-img{
+    padding: 10px;
+    background: #45619D;
+    color: #fafafa;
+    -webkit-box-shadow: -10px 9px 0px -2px rgba(255,213,0,1);
+    -moz-box-shadow: -10px 9px 0px -2px rgba(255,213,0,1);
+    box-shadow: -10px 9px 0px -2px rgba(255,213,0,1);
+    margin-bottom: 20px;
+    position : relative;
+    min-height: 220px
+}
+
+#profile .profile-orders-tracking{
+	width : 58%;
+	display: inline-block;
+	min-height: 300px;
+	vertical-align: top;
+}
+
+#profile table img{
+	min-width: 100px;
+	max-width: 100px
+}
+#profile table td{
+	vertical-align: middle;
+}
+.under-contruct{
+	text-align: center;
+	margin-top: 50px
+}

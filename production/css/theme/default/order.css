@@ -1,0 +1,29 @@
+#order-checkout{
+	padding: 0px 10px 0px 10px;
+	background: url('../../../imgs/theme/sativa.png');
+	min-height: 500px;
+	padding-bottom : 20px;
+  overflow-y: auto;
+  max-height: 650px;
+  overflow-x: hidden;
+}
+#order-checkout .left-user{
+	/*background: url('../../../imgs/theme/symphony.png');*/
+	background: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	padding: 10px;
+	max-height: 535px;
+    overflow: auto;
+}
+#order-checkout .step2{
+	position: relative;
+}
+#order-checkout .step2 .back{
+	position: absolute;
+	top: -10px;
+	left: 15px;
+}
+
+#order-checkout .step2 .bank-info .media-left{
+	min-width: 200px
+}
