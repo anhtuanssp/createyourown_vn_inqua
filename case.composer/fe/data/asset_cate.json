@@ -1,0 +1,30 @@
+{
+	"assets" : [
+		{
+			"asset_id" : "1",
+			"asset_name" : "Hình trừu tượng",
+			"do_uu_tien" : "1"
+		},
+		{
+			"asset_id" : "2",
+			"asset_name" : "Hình football club",
+			"do_uu_tien" : "2"
+		},
+		{
+			"asset_id" : "3",
+			"asset_name" : "Hình xuân",
+			"do_uu_tien" : "3"
+		},
+		{
+			"asset_id" : "4",
+			"asset_name" : "Hình pattern",
+			"do_uu_tien" : "4"
+		},
+		{
+			"asset_id" : "5",
+			"asset_name" : "Mẫu câu Sologan",
+			"do_uu_tien" : "4"
+		}
+	],
+	"count" : 20
+ }

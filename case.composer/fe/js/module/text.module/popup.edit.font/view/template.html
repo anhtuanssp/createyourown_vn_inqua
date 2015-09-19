@@ -1,0 +1,38 @@
+<script id="edit-font-template-module" type="text/x-handlebars-template">
+    <div style="padding:15px">
+        <div class="toggle-zone-font">
+            <span class="title-style-1 thunghiem"> <i class="fa fa-font"></i> FONT </span>
+            <select class="font-select">
+                <option value="Perfograma,arial, helvetica">
+                    <span style="font-family: 'Perfograma,arial, helvetica' ">Perfograma</span>
+                </option>
+            </select>
+            <hr>
+            <div>
+                <span class="title-style-1"> Chọn partern cho font </span>
+                <input type="file" accept="image/*" name="imagePatternFormComputer">
+            </div>
+            <hr>
+
+        </div>
+                    <div class="font-weight">
+                <strong>Font weigth : </strong>
+                <label>
+                    <input type="radio" name="fontW" value="bold"> Bold</label>
+                <label>
+                    <input type="radio" name="fontW" value="italic"> Italic</label>
+                <label>
+                    <input type="radio" name="fontW" value="normal"> Normal</label>
+            </div>
+            <hr>
+            <div class="font-select-v2">
+            </div>
+        <div class="d3-cloud-world">
+            <span class="title-style-1"> <i class="fa fa-font"></i> Cloud text </span>
+            <div class="d3-cloud-text-demo"></div>
+            <textarea name="clould-world" style="width:100%;height:100px">Nhập ký tự vào ô này và bấm nút Add vào sản phẩm để chuyển hình vào sản phẩm</textarea>
+            <button type="button" class="btn btn-primary xem-truoc">Xem trước</button>
+            <button type="button" class="btn btn-primary btn-cloud-text-submit">Add vào sản phẩm</button>
+        </div>
+    </div>
+</script>

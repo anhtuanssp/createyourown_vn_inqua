@@ -1,0 +1,1 @@
+var thietKeMauApp = angular.module('thietKeMauApp', ['thietkemauController']);
