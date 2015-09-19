@@ -3,8 +3,8 @@
 }
 
 #main-menu{
-	background-image: url('../../../imgs/theme/sativa.png');
-	border: 1px solid #c9c9c9;
+	/*background-image: url('../../../imgs/theme/sativa.png');*/
+	/*border: 1px solid #c9c9c9;*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -14,7 +14,8 @@
 	min-height: 70px;
 	height: 70px;
 	z-index: 999;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	background: #677077;
+	/*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);*/
 }
 #main-menu h1{
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -24,8 +25,9 @@
 	font-size: 45px;
 }
 #main-menu a{
-	color: #000;
+	color: #fafafa;
 	text-decoration: none;
+	
 }
 
 
@@ -42,6 +44,16 @@
 	transition : all 0.5s ease;
 }
 
+#main-menu .cus-main-nav > li:hover{
+border-bottom: 2px solid #fafafa;
+}
+
+ul.my-nav-style li.active{
+  border-bottom: 2px solid #fafafa;
+  padding: 10px;
+  cursor: pointer;
+}
+
 #main-menu .login-wrapper{
 	display: inline-block;
 	right: 0;
@@ -51,14 +63,14 @@
 #main-menu .container_CP{
 	background: none;
 	box-shadow: none;
-	width: 1100px
+	width: 1200px
 }
+
 
 .sologan h2{
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: 700
 }
-
 #main-menu .cus-main-nav li:hover .my-nav-style-level2 {
 	display : block;
 }
@@ -67,9 +79,9 @@
     position: absolute;
     top: 52px;
     width: 100%;
-    background-color: #C9C9C9;
+    background-color: #677077;
     left: 0;
-    padding: 10px;
+    padding: 35px;
     border-radius: 3px;
     display : none;
     
@@ -85,7 +97,7 @@
 	
 }
 .my-nav-style-block-level2 span a{
-    color: #337ab7 !important;
+    color: #FFEC16 !important;
     font-weight: bold;
 }
 .my-nav-style-block-level2 ul {
@@ -103,9 +115,9 @@
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 7px solid #000;
+    border-top: 7px solid #fff;
     position: absolute;
     content: '';
     top: 0px;
-    left: 126px;
+    left: 200px;
 }

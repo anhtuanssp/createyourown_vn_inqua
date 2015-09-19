@@ -12,6 +12,8 @@
 	background: #fff;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	padding: 10px;
+	max-height: 535px;
+    overflow: auto;
 }
 #order-checkout .step2{
 	position: relative;

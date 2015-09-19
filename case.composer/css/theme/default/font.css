@@ -36,18 +36,4 @@
 @font-face { font-family: VL_Tinta-Script; src: url('../../../fonts/VL_Tinta-Script.otf'); }
 @font-face { font-family: Hipsteria; src: url('../../../fonts/Hipsteria.ttf'); }
 
-@font-face{font-family:DTV-DIN;font-weight:400;font-style:normal;
-	src:url(../../../fonts/DINWeb.eot);
-	src:url(../../../fonts/DINWeb.eot?#iefix) format('embedded-opentype'),
-		url(../../../fonts/DINWeb.woff) format('woff')}
 
-@font-face{font-family:DTV-DIN;font-weight:700;font-style:normal;
-	src:url(../../../fonts/DINWeb-Bold.eot);
-	src:url../../../fonts/(DINWeb-Bold.eot?#iefix) format('embedded-opentype'),
-		url(../../../fonts/DINWeb-Bold.woff) format('woff')}
-
-@font-face{font-family:DTV-DIN-BOLD;font-weight:400;font-style:normal;
-	src:url(../../../fonts/DINWeb-Bold.eot);
-	src:url(../../../fonts/DINWeb-Bold.eot?#iefix) format('embedded-opentype'),
-		url(../../../fonts/DINWeb-Bold.woff) format('woff')}
-		

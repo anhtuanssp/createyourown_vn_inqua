@@ -75,7 +75,7 @@ some cases may stretch layouts. So, we're just hiding it.
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: .75;
+  opacity: .5;
   background-image: url('../../../imgs/theme/sativa.png');
 }
 input[type="text"].input,input[type="password"].input ,input[type="email"].input{
@@ -215,11 +215,7 @@ ul.my-nav-style li{
   padding: 10px;
   /*border-bottom: 1px solid #c9c9c9;*/
 }
-ul.my-nav-style li.active{
-  border-bottom: 2px solid #000;
-  padding: 10px;
-  cursor: pointer;
-}
+
 ul.my-nav-style li a{
   color: #000;
   display: inline-block;
@@ -227,6 +223,7 @@ ul.my-nav-style li a{
   height: 100%;
   cursor: pointer;
   font-size: 18px;
+  text-transform: uppercase;
 }
 ul.my-nav-style li a:hover{
   color: #c9c9c9
@@ -312,6 +309,7 @@ i.fa-facebook{
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
+  border: none !important;
 }
 .btn-circle.btn-lg {
   width: 50px;
@@ -382,12 +380,15 @@ div.card input:hover {
 }
 
 div.card .submit {
-  border: 0;
+  border: 1px solid;
   background-color: white;
   color: #03a9f4;
   text-transform: uppercase;
   width: auto;
   cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  clear: both;
+  margin: 0px 0px 0px 390px;
 }
 
 div.card .ta{
@@ -397,7 +398,7 @@ div.card .ta{
   width: 100%;
   margin-top: 15px;
   transition: border-color 0.3s;
-  height: 150px
+  height: 100px
 
 }
 
@@ -414,4 +415,19 @@ div.card .ta{
   position: absolute;
   top: -171px;
   right: 0;
+}
+/*BOOTSTRAP*/
+.nav-tabs {
+    border-bottom: 1px solid #FFEC16;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border: 1px solid #FFEC16;
+    border-bottom-color:  transparent;
+}
+
+.btn-non-border{
+  border: none;
+    text-align: left !important;
+    float: left;
+    color: #677077;
 }

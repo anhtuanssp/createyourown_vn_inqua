@@ -7,7 +7,8 @@
 	min-height: 340px;
 	margin: 10px;
 	/*border: 1px solid #c9c9c9;*/
-	background: #fff
+	background: #fff;
+	position: relative;
 }
 .my-block .khung-anh{
 	width: 95%;
@@ -32,7 +33,7 @@
 .show-case {
 	text-align: center;
 	margin-top: 10px;
-	background: url(../../../imgs/theme/Chl8GSo.jpg);
+	background: url('../../../imgs/theme/sativa.png');
 	padding: 25px;
 	min-height: 400px
 }
