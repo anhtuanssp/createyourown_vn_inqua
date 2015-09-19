@@ -27,7 +27,7 @@
                     'name' : val.product_name
                 }
                 var href = CP_LINK.url.design + MYLIB.createUrl(param);
-                var tmp = '<div style="width:200px;display:inline-block;margin:20px">'+
+                var tmp = '<div style="width:200px;display:inline-block;margin:20px;text-align:center">'+
                     '<a href="'+href+'"><span>{1}</span></a>'+
                 '<img class="img-responsive thumbnail" src="{0}" /> </div>';
                 tmp = $(tmp.format(MYLIB.IMAGEHOST +val.product_img_thumb,val.product_name));
