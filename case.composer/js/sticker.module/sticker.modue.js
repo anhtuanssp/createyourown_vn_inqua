@@ -165,7 +165,7 @@
         if (this.listAssetMediaChoice.length < 5) {
             this.listAssetMediaChoice.push(data);
             // console.table(this.listAssetMediaChoice)
-            var tmp = '<div class="col-sm-2" style="cursor:pointer"><img class="thumbnail img-responsive" src="{0}"/></div>';
+            var tmp = '<div class="col-sm-2" style="cursor:pointer;text-align:center"><i class="fa fa-close"></i><img class="thumbnail img-responsive" src="{0}"/></div>';
             tmp = $(tmp.format(MYLIB.IMAGEHOST + '/' + data.thumb));
             var that = this;
             tmp.bind('click', data, function(event) {
