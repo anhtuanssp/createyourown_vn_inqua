@@ -69,7 +69,7 @@
 
         this.$prev = null;
         this.$next = null;
-        this.tmpItem = '<div class="as-item col-sm-2 col-xs-2" style="margin-bottom:10px;cursor:pointer">' +
+        this.tmpItem = '<div class="as-item col-sm-2 col-xs-2" style="margin-bottom:10px;cursor:pointer;min-height:125px">' +
             '<img src="{0}" class="img-responsive img-thumbnail"/>' +
             '</div>';
 

@@ -57,4 +57,15 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 
 	}
 
+	public function tangLuotXemChoAssetMedia($id){
+		try {
+			$as =  Assetmedia::find($id);
+			$as->luotxem += $as.luotxem;
+			$as->save();
+		} catch (\Exception $e) {
+			return false;
+		}
+	}
+
+
 }

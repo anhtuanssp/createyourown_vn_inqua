@@ -64,4 +64,9 @@ class ApiAssetMediaController extends BaseController {
 		$resutl = $this->assetMedia->getAssetMediaByListID($p["data"]);
 		return Response::json($resutl,200);
 	}
+
+	public function addCountAssetMedia($id){
+		$this->assetMedia->tangLuotXemChoAssetMedia($id);
+		return Response::json('success', 200);
+	}
 }

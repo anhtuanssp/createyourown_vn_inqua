@@ -137,13 +137,13 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.api_v1','after' =>'co
     Route::resource('getSpecificProducts', 'apiv1\ApiProductController@getSpecificProducts');
     Route::resource('getCate', 'apiv1\ApiProductController@getCate');
     Route::resource('getProductRelateByID', 'apiv1\ApiProductController@getProductRelateByID');
-
     Route::resource('getAllProductAllHome', 'apiv1\ApiProductController@productsOnHome');
     
     Route::resource('getAssetMediaByCate', 'apiv1\ApiAssetMediaController@getAssetMediaByCate');
     Route::resource('getCateAssetMedia', 'apiv1\ApiAssetMediaController@cates');
     Route::resource('getAssetMediaByLimit','apiv1\ApiAssetMediaController@getAssetMediaByLimit');
     Route::resource('getAssetsMediaByIds','apiv1\ApiAssetMediaController@getAssetsMediaByIds');
+    Route::resource('addCountAssetMedia','apiv1\ApiAssetMediaController@addCountAssetMedia');
 
     Route::resource('orders', 'ApiOrdersController');
     Route::resource('createOrder', 'apiv1\ApiOrdersController@create');

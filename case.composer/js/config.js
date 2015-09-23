@@ -100,7 +100,8 @@
 		getUserProfile : 'getUserProfile',
 		updateProfileUser : 'updateProfileUser',
 		getAssetMediaByLimit : 'getAssetMediaByLimit',
-		getAssetsMediaByIds  : 'getAssetsMediaByIds'
+		getAssetsMediaByIds  : 'getAssetsMediaByIds',
+		addCountAssetMedia : 'addCountAssetMedia'
 	}
 	//namespace
 	MYLIB.namespace('CP');
