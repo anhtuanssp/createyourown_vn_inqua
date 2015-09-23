@@ -10,4 +10,5 @@ interface AssetMediaRepository{
 	public function create($input);
 	public function delete($id);
 	public function getAssetMediaByListID($aids);
+	public function tangLuotXemChoAssetMedia($id);
 }

@@ -39,6 +39,13 @@
 		});
 		return ajax;
 	}
+	CP.AssetsSerice.prototype.addCountAssetMedia = function(id){
+		$.ajax({
+			url : MYLIB.HOST + MYLIB.SERVICENAME.addCountAssetMedia +'/'+id,
+			type: 'GET',
+			dataType: 'json',
+		}).done(function(res){})
+	}
 
 	CP.AssetsSerice.getInstance = new CP.AssetsSerice();
 
