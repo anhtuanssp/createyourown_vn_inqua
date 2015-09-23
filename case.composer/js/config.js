@@ -76,8 +76,8 @@
 		appid : '757643010983337'
 	}
 
-	MYLIB.HOST = 'http://localhost/laravel/public/api/v1/';
-	MYLIB.IMAGEHOST = 'http://localhost/laravel/public';
+	MYLIB.HOST = 'http://localhost/createyourown_vn_inqua/cms/public/api/v1/';
+	MYLIB.IMAGEHOST = 'http://localhost/createyourown_vn_inqua/cms/public';
 
 	MYLIB.SERVICENAME = {
 		getAllProducts : 'getAllProduct',
@@ -98,7 +98,10 @@
 		getProductRelateByID : 'getProductRelateByID',
 		fakeServiceTest1 : 'fakeServiceTest1',
 		getUserProfile : 'getUserProfile',
-		updateProfileUser : 'updateProfileUser'
+		updateProfileUser : 'updateProfileUser',
+		getAssetMediaByLimit : 'getAssetMediaByLimit',
+		getAssetsMediaByIds  : 'getAssetsMediaByIds',
+		addCountAssetMedia : 'addCountAssetMedia'
 	}
 	//namespace
 	MYLIB.namespace('CP');
@@ -235,8 +238,8 @@
 		]
 	}
 
-	MYLIB.mainUrl = 'http://localhost/case.composer/fe/';
-	MYLIB.mainURLIMG = 'http://localhost/case.composer/fe/imgs/';
+	MYLIB.mainUrl = 'http://localhost/createyourown_vn_inqua/case.composer/';
+	MYLIB.mainURLIMG = 'http://localhost/createyourown_vn_inqua/case.composer/imgs/';
 
 	MYLIB.typeFile = {
 		'png' : 'image/png',

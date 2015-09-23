@@ -1,0 +1,35 @@
+{
+	"products" : [
+		{
+			"product_id" : "1",
+			"product_name" : "IPHONE 6",
+			"product_img_thumb" : "imgs/product/tmpiphone5.png",
+			"product_img_primary" : "imgs/product/tmpiphone5.png",
+			"product_img_primary_mask" : "imgs/product/tmpiphone5-mask.png"
+		},
+		{
+			"product_id" : "2",
+			"product_name" : "CANVAS",
+			"product_img_thumb" : "imgs/product/canvas.png",
+			"product_img_primary" : "imgs/product/canvas.png",
+			"product_img_primary_mask" : "imgs/product/canvas-mask.png"
+		},
+		{
+			"product_id" : "3",
+			"product_name" : "IPHONE 5",
+			"product_img_thumb" : "imgs/product/tmplcase5-type1.jpg",
+			"product_img_primary" : "imgs/product/tmplcase5-type1.jpg",
+			"product_img_primary_mask" : "imgs/product/tmplcase5-type1-mask.png"
+		},
+		{
+			"product_id" : "4",
+			"product_name" : "BLACK SHIRT",
+			"product_img_thumb" : "imgs/product/shirt.png",
+			"product_img_primary" : "imgs/product/shirt.png",
+			"product_img_primary_mask" : "imgs/product/shirt-mask.png"
+		}
+		
+		
+
+	]
+}

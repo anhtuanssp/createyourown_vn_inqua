@@ -1,0 +1,2 @@
+/*! Project case.composer 2014-12-24 */
+!function(){CP.MyText=fabric.util.createClass(fabric.Text,{type:"MyText",initialize:function(a){a||(a={}),this.callSuper("initialize",a),this.set("idText",a.idText||(new Date).getTime())}}),CP.MyText.prototype.getID=function(){return this.idText},MYLIB.mixin(CP.MyText,MYLIB.Event.ObserverMixin)}(jQuery,window,document);
