@@ -245,6 +245,7 @@
 				var source = MYLIB.IMAGEHOST+that.data.photo;
 				var id = that.data.id;
 				var thumb = that.data.thumb;
+				CP.AssetsSerice.getInstance.addCountAssetMedia(id);
 				MYLIB.convertImgToBase64(source,function (basce64){
 					MYLIB.REMOVE_LOADING();
 					// MYLIB.eventManager.fireEvent(that,MYLIB.eventNames.event_upload_from_computer,basce64);

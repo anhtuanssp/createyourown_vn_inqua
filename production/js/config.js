@@ -1,4 +1,4 @@
-;(function (){
+﻿;(function (){
 	MYLIB.constant = {
 		//app constant
 		app_id : 'app',
@@ -99,7 +99,8 @@
 		getUserProfile : 'getUserProfile',
 		updateProfileUser : 'updateProfileUser',		
 		getAssetMediaByLimit : 'getAssetMediaByLimit',
-		getAssetsMediaByIds  : 'getAssetsMediaByIds'
+		getAssetsMediaByIds  : 'getAssetsMediaByIds',
+		addCountAssetMedia : 'addCountAssetMedia'
 	}
 	//namespace
 	MYLIB.namespace('CP');
