@@ -52,7 +52,7 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 
 	public function getAssetMediaByListID($aids){
 		$arrayId = explode(',', $aids);
-		// dd($arrayId);
+		Assetmedia::whereIn('id',$arrayId )->increment('luotxem');
 		return Assetmedia::whereIn('id',$arrayId )->get();
 
 	}
