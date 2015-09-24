@@ -67,5 +67,14 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 		}
 	}
 
+	public function getAssetMediaByCateId($cateId,$numPagi){
+		if($cateId != 'all'){
+			$asms = Category::find($cateId)->assetmedias()->orderBy('luotxem', 'desc')->paginate($numPagi);
+		}else if($cateId == 'all'){
+			$asms =  Assetmedia::orderBy('luotxem', 'desc')->paginate($num);
+		}
+		
+		return $asms;
+	}
 
 }

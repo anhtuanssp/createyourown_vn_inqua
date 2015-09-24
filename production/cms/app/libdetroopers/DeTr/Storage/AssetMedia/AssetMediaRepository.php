@@ -11,4 +11,5 @@ interface AssetMediaRepository{
 	public function delete($id);
 	public function getAssetMediaByListID($aids);
 	public function tangLuotXemChoAssetMedia($id);
+	public function getAssetMediaByCateId($cateId,$numPagi);
 }
