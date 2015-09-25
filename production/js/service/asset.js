@@ -30,10 +30,13 @@
 		});
 		return ajax;
 	}
-	CP.AssetsSerice.prototype.getAssetMediaByLimit = function (limit,page){
+	CP.AssetsSerice.prototype.getAssetMediaByLimit = function (limit,page,cateId){
+		if(cateId == undefined){
+			cateId = 'all';
+		}
 		var ajax = $.ajax({
 			// url: 'data/asset_cate.json',
-			url : MYLIB.HOST + MYLIB.SERVICENAME.getAssetMediaByLimit+'/'+limit+'?page='+page,
+			url : MYLIB.HOST + MYLIB.SERVICENAME.getAssetMediaByLimit+'/'+limit+'?page='+page+'&cid='+cateId,
 			type: 'GET',
 			dataType: 'json',
 		});
