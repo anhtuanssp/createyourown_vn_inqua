@@ -52,8 +52,7 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 
 	public function getAssetMediaByListID($aids){
 		$arrayId = explode(',', $aids);
-		// dd($arrayId);
-		 Assetmedia::whereIn('id',$arrayId )->increment('luotxem');
+		Assetmedia::whereIn('id',$arrayId )->increment('luotxem');
 		return Assetmedia::whereIn('id',$arrayId )->get();
 
 	}
@@ -68,5 +67,19 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 		}
 	}
 
+	public function getAssetMediaByCateId($cateId,$numPagi){
+		if($cateId != 'all'){
+			try {
+				$asms = Category::find($cateId)->assetmedias()->orderBy('luotxem', 'desc')->paginate($numPagi);
+			} catch (FatalErrorException  $e) {
+				return 'fail';
+			}
+			
+		}else if($cateId == 'all'){
+			$asms =  Assetmedia::orderBy('luotxem', 'desc')->paginate($numPagi);
+		}
+		
+		return $asms;
+	}
 
 }

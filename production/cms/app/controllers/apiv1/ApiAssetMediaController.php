@@ -54,10 +54,13 @@ class ApiAssetMediaController extends BaseController {
 	 * @param  [type] $limit [description]
 	 * @return [type]        [description]
 	 */
-	public function getAssetMediaByLimit($limit){
-		$asLimit = $this->assetMedia->paginateAssetMediaOrderByLuotXem($limit);
+	public function getAssetMediaByLimit($limit,$cateId = 'all'){
+		$p = Input::all();
+		$cateId = ($p['cid']=='all')?$cateId : $p['cid'];
+		$asLimit = $this->assetMedia->getAssetMediaByCateId($cateId,$limit);
 		return Response::json($asLimit, 200);
 	}
+
 
 	public function getAssetsMediaByIds(){
 		$p = Input::all();
