@@ -123,6 +123,7 @@
         this.$el.find('#asc').append(this.assetCateModule.$el);
     }
     CP.StickerModule.prototype.filterByCate = function(data,li) {
+        this.current_page = 1;
         this.assetCateModule.$el.find('li').removeClass(this.assetCateModule.classActive);
         li.addClass(this.assetCateModule.classActive)
         this.cateID = data.asset_id;
@@ -262,6 +263,25 @@
             this.$next
                 .unbind('click')
                 .bind('click', this.nextAction.bind(this));
+        } else if (this.current_page == 1 && this.last_page == 1) {
+
+            this.$prev.addClass('disable').css({
+                opacity: '0.5',
+                cursor: 'default'
+            });
+            this.$next.removeClass('disable').css({
+                opacity: '1',
+                cursor: 'pointer'
+            });
+
+            this.$prev
+                .unbind('click')
+
+
+            this.$next
+                .unbind('click')
+                .bind('click', this.nextAction.bind(this));
+
         } else if (this.current_page == this.last_page) {
 
             this.$prev.removeClass('disable').css({

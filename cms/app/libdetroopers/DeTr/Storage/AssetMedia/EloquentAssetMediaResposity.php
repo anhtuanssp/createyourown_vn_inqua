@@ -13,7 +13,7 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 		return Assetmedia::all();
 	}
 	public function paginateAssetMedia($num){
-		return Assetmedia::orderBy('id', 'desc')->paginate($num);
+		return Assetmedia::orderBy('id', 'desc')->orderBy('id', 'desc')->paginate($num);
 	}
 	public function paginateAssetMediaOrderByLuotXem($num){
 		return Assetmedia::orderBy('luotxem', 'desc')->paginate($num);
@@ -70,13 +70,13 @@ class EloquentAssetMediaRepository implements AssetMediaRepository
 	public function getAssetMediaByCateId($cateId,$numPagi){
 		if($cateId != 'all'){
 			try {
-				$asms = Category::find($cateId)->assetmedias()->orderBy('luotxem', 'desc')->paginate($numPagi);
+				$asms = Category::find($cateId)->assetmedias()->orderBy('luotxem', 'desc')->orderBy('id', 'desc')->paginate($numPagi);
 			} catch (FatalErrorException  $e) {
 				return 'fail';
 			}
 			
 		}else if($cateId == 'all'){
-			$asms =  Assetmedia::orderBy('luotxem', 'desc')->paginate($numPagi);
+			$asms =  Assetmedia::orderBy('luotxem', 'desc')->orderBy('id', 'desc')->paginate($numPagi);
 		}
 		
 		return $asms;
