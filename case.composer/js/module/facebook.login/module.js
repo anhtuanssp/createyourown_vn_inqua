@@ -7,8 +7,10 @@
         this.parent = parent;
         this.htmlNotAuth =
             '<div id="facebook-login-zone">' +
-            '<span class="btn btn-primary" style="margin: 0px;" onclick="CP.FacebookService.getInstance.loginFacebook()">' +
-            '<i class="fa fa-facebook size-18" style="color:#fff"></i> Đăng nhập với Facebook - CYW</span>' +
+            '<span class="btn btn-primary" style="margin: 0px;"' +
+            'onclick="CP.FacebookService.getInstance.loginFacebook()">' +
+            '<i class="fa fa-facebook size-18" style="color:#fff"></i> Đăng nhập với Facebook <i class="fa fa-share"></i>' +
+            '</span>' +
             '<hr/>' +
             '</div>';
         this.htmlAuth =
@@ -17,10 +19,13 @@
             '<i class="fa fa-facebook size-32" style="color:#fff;position: absolute;"></i><a href="profile.html" style="color:#fff"><img class="img-profile" src="" style="width:100%"/></a>' +
             '</div>' +
 
-        '<br/>Chào :<b><a href="profile.html" style="color:#fff"><span class="username"> </span></a></b>' +
+            '<br/>Chào :<b><a href="profile.html" style="color:#fff"><span class="username"> </span></a></b>' +
             '<br/><span class="btn btn-primary bnt-logout"> Log out </span>' +
+            '<span class="btn btn-primary bnt-share"> Share <i class="fa fa-share"></i> </span>' +
+            '</div>';
 
-        '</div>';
+        this.popupShare = new CP.FacebookLoginModule.PopupShareFacebook(this.parent);
+        this.popupShare.init();
 
     }
     CP.FacebookLoginModule.prototype.init = function(callback_success) {
@@ -69,7 +74,13 @@
         this.$el.find('.bnt-logout').click(function(event) {
             that.logout();
         });
+        this.$el.find('.bnt-share').click(function(event) {
+            that.openPopupShare();
+        });
         callback_success();
+    }
+    CP.FacebookLoginModule.prototype.openPopupShare = function() {
+        this.popupShare.show();
     }
 
     CP.FacebookLoginModule.prototype.auth_status_change_callback = function(response) {
@@ -99,6 +110,178 @@
                 that.parent.$el.prepend(that.$el)
             })
         }
+    }
+
+    /*
+     * Facebook popup share 
+     */
+    CP.FacebookLoginModule.PopupShareFacebook = function(parentScope) {
+        this.parentScope = parentScope;
+        this.view = '<div style="padding:20px">' +
+            '<form>' +
+            '<legend>Điền thông tin để share</legend>' +
+
+            '<div class="form-group">' +
+            '<label for="">Chia sẽ</label>' +
+            '<input type="text" class="form-control" id="message" placeholder="Input field">' +
+            '</div>' +
+
+            '<div class="review" style="">' +
+                '<canvas id="share_facebook" width="550px" height="250px">'+
+            '</div>' +
+            '<br/>'+
+            '<div style="position: absolute;top: 26%;right: 4%;">'+
+                '<span class="share-facebook btn btn-default btn-primary">Share now <i class="fa fa-share"></i></span>'
+            '</div>'+
+            '</div class="clearfix"></div>'+
+        '</form>' +
+        '</div>';
+
+        this.canvasShare = null;
+    }
+
+    MYLIB.extend(CP.FacebookLoginModule.PopupShareFacebook, CP.PopupModule);
+
+    CP.FacebookLoginModule.PopupShareFacebook.prototype.init = function() {
+
+        this.titlePopup = 'Share lên facebook của bạn';
+
+        this.parent.proto.init.call(this);
+
+        this.$el.appendTo('body');
+
+        this.$el.find('.modal-lg').removeClass('modal-lg').css({
+            width: '600px'
+        });
+
+        this.$elContent.append(this.view);
+
+        this.canvasShare = new fabric.Canvas('share_facebook', {
+            renderOnAddition: false,
+            hoverCursor: 'pointer',
+            selection: true,
+            isDrawingMode: false,
+        });
+        this.canvasShare.setBackgroundColor('#FFEC16');
+
+        this.$el.find('.share-facebook')
+            .unbind('click')
+            .bind('click', this.shareFacebookHandler.bind(this))
+
+
+    };
+
+    CP.FacebookLoginModule.PopupShareFacebook.prototype.shareFacebookHandler = function(){
+        
+    }
+
+    CP.FacebookLoginModule.PopupShareFacebook.prototype.show = function() {
+        this.$el.modal('show');
+
+        var that = this;
+        that.canvasShare.clear().renderAll();
+
+        this.canvasShare.add(
+            new fabric.Rect({
+                top: 150,
+                left: 0,
+                width: 550,
+                height: 80,
+                fill: '#45619D'
+            }),
+            new fabric.Text('inqua.vn', {
+                left: 30,
+                top: 10,
+                fontSize: 60,
+                fill: '#fff',
+                fontWeight: 'bold'
+            }),
+            new fabric.Text('Create Your Own', {
+                left: 30,
+                top: 88,
+                fontSize: 20,
+                fill: '#000'
+            }),
+            new fabric.Text('Thank for your sharing', {
+                left: 10,
+                top: 200,
+                fontSize: 14,
+                fill: '#fff'
+            })
+        )
+        var imgObjLogo = new Image();
+        imgObjLogo.src = 'http://inqua.vn/cms/public/packages/anahkiasen/illuminage/f07bc2ba74e90b7c7b6b889b02da05d5.png';
+
+        imgObjLogo.onload = function() {
+            var image = new fabric.Image(imgObjLogo, {
+                centeredScaling: true,
+                centeredRotation: true,
+                scaleX: 100 / imgObjLogo.width,
+                scaleY: 100 / imgObjLogo.height,
+                left: 380,
+                top: 20,
+            });
+
+            that.canvasShare.add(image)
+        }
+
+        if (this.parentScope.callBackDashboardModule.rightModule.getMainCanvas().hasBack) {
+            var imgObj = new Image();
+            imgObj.src = this.parentScope.callBackDashboardModule.rightModule.getMainCanvas().saveCanvasToImg();
+
+            imgObj.onload = function() {
+                var image = new fabric.Image(imgObj, {
+                    centeredScaling: true,
+                    centeredRotation: true,
+                    scaleX: 100 / imgObj.width,
+                    scaleY: 100 / imgObj.height,
+                    stroke: '#c9c9c9',
+                    strokeWidth: 10,
+                    left: 250,
+                    top: 140,
+                });
+
+                that.canvasShare.add(image)
+            }
+
+            var imgObjBack = new Image();
+            imgObjBack.src = this.parentScope.callBackDashboardModule.rightModule.getMainCanvas().saveCanvasBackToImg();
+
+            imgObjBack.onload = function() {
+                var image = new fabric.Image(imgObjBack, {
+                    centeredScaling: true,
+                    centeredRotation: true,
+                    scaleX: 100 / imgObjBack.width,
+                    scaleY: 100 / imgObjBack.height,
+                    left: 400,
+                    top: 140,
+                    stroke: '#c9c9c9',
+                    strokeWidth: 10,
+                });
+
+                that.canvasShare.add(image)
+            }
+
+        } else {
+            var imgObj = new Image();
+            imgObj.src = this.parentScope.callBackDashboardModule.rightModule.getMainCanvas().saveCanvasToImg();
+
+            imgObj.onload = function() {
+                var image = new fabric.Image(imgObj, {
+                    centeredScaling: true,
+                    centeredRotation: true,
+                    scaleX: 100 / imgObj.width,
+                    scaleY: 100 / imgObj.height,
+                    stroke: '#c9c9c9',
+                    strokeWidth: 10,
+                    left: 400,
+                    top: 140,
+                });
+
+                that.canvasShare.add(image)
+            }
+        }
+
     }
 
 })(jQuery, window, document)
