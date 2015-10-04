@@ -390,28 +390,50 @@
 		var email = this.$inputEmail.val();
 		var phone = this.$inputPhone.val();
 		var name = this.$inputName.val();
+
+		var isValidateName = false,
+		isValidatePhone = false;
+		isValidateEmail = false;
+		isValidateSoLuong = false;
+
 		var soluong = this.$inputSoluong.val();
 		if(! ($.trim(name) != '' ) ){
 			this.$inputName.toggleClass('animated swing');
-			alert('Xin quý khách vui lòng nhập tên họ!')
-			return false;
+			this.$inputName.siblings('.error').html('').html('Xin quý khách vui lòng nhập tên họ!')
+			isValidateName = false;
+		}else{
+			this.$inputName.siblings('.error').html('');
+			isValidateName = true;
 		}
 		if(!CP.Validate.checkEmail(email)){
 			this.$inputEmail.toggleClass('animated swing');
-			return false;
-		}
-		if(!CP.Validate.checkPhone(phone,8,11)){
-			this.$inputPhone.toggleClass('animated swing');
-			alert('Số điện thoại phải từ 8 -> 11 số.. Xin quý khách thông cảm')
-			return false;
-		}
-		if(!CP.Validate.checkNumber(soluong,0,20)){
-			this.$inputSoluong.toggleClass('animated swing');
-			alert('Xin lỗi, chúng tôi chỉ cung cấp được số lượng từ 1-10 sản phẩm')
-			return false;
+			this.$inputEmail.siblings('.error').html('').html('Email không hợp lệ')
+			isValidateEmail = false;
+		}else{
+			isValidateEmail = true;
+			this.$inputEmail.siblings('.error').html('')
 		}
 
-		return true;
+		if(!CP.Validate.checkPhone(phone,8,11)){
+			this.$inputPhone.toggleClass('animated swing');
+			this.$inputPhone.siblings('.error').html('').html('Số điện thoại phải từ 8 -> 11 số. Xin quý khách thông cảm, nhập số điện thoại đúng để dễ cho việc giao hàng!')
+			isValidatePhone = false;
+		}else{
+			this.$inputPhone.siblings('.error').html('');
+			isValidatePhone = true;
+		}
+		if(!CP.Validate.checkNumber(soluong,0,10)){
+			this.$inputSoluong.toggleClass('animated swing');
+			this.$inputSoluong.siblings('.error').html('').html('Xin lỗi, chúng tôi chỉ cung cấp được số lượng từ 1-10 sản phẩm')
+			isValidateSoLuong = false;
+		}else{
+			this.$inputSoluong.siblings('.error').html('')
+			isValidateSoLuong = true;
+		}
+		if(isValidateEmail && isValidatePhone && isValidateSoLuong){
+			return true;
+		}
+		return false;
 	}
 	CP.OrderStep1Module.prototype.getValue = function () {
 		if(this.callbackOrderModule.orderModule.dashboardCallback.rightModule.mainCanvas.is_layerCircle){
@@ -566,19 +588,31 @@
 		var phone = this.$phonenguoinhan.val();
 		var name = this.$tennguoinhan.val();
 
+		var isValidateName = false,
+			isValidatePhone = false;
+
 		if(! ($.trim(name) != '' ) ){
 			this.$tennguoinhan.toggleClass('animated swing');
-			alert('Xin quý khách vui lòng nhập tên người nhận!')
-			return false;
+			this.$tennguoinhan.siblings('.error').html('').html('Xin quý khách vui lòng nhập tên người nhận!')
+			isValidateName =  false;
+		}else{
+			this.$tennguoinhan.siblings('.error').html('');
+			isValidateName = true;
 		}
 		if(!CP.Validate.checkPhone(phone,8,11)){
 			this.$phonenguoinhan.toggleClass('animated swing');
-			alert('Số điện thoại phải từ 8 -> 11 số.. Xin quý khách thông cảm')
-			return false;
+			this.$phonenguoinhan.siblings('.error').html('').html('Số điện thoại phải từ 8 -> 11 số. Xin quý khách thông cảm, nhập số điện thoại đúng để dễ cho việc giao hàng!')
+			isValidatePhone = false;
+		}else{
+			isValidatePhone = true;
+			this.$phonenguoinhan.siblings('.error').html('');
 		}
 
+		if(isValidateName && isValidatePhone){
+			return true;
+		}
 
-		return true;
+		return false;
 	}
 
 	CP.OrderStep2Module.prototype.getValue = function () {

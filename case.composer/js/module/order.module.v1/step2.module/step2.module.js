@@ -107,19 +107,31 @@
 		var phone = this.$phonenguoinhan.val();
 		var name = this.$tennguoinhan.val();
 
+		var isValidateName = false,
+			isValidatePhone = false;
+
 		if(! ($.trim(name) != '' ) ){
 			this.$tennguoinhan.toggleClass('animated swing');
-			alert('Xin quý khách vui lòng nhập tên người nhận!')
-			return false;
+			this.$tennguoinhan.siblings('.error').html('').html('Xin quý khách vui lòng nhập tên người nhận!')
+			isValidateName =  false;
+		}else{
+			this.$tennguoinhan.siblings('.error').html('');
+			isValidateName = true;
 		}
 		if(!CP.Validate.checkPhone(phone,8,11)){
 			this.$phonenguoinhan.toggleClass('animated swing');
-			alert('Số điện thoại phải từ 8 -> 11 số.. Xin quý khách thông cảm')
-			return false;
+			this.$phonenguoinhan.siblings('.error').html('').html('Số điện thoại phải từ 8 -> 11 số. Xin quý khách thông cảm, nhập số điện thoại đúng để dễ cho việc giao hàng!')
+			isValidatePhone = false;
+		}else{
+			isValidatePhone = true;
+			this.$phonenguoinhan.siblings('.error').html('');
 		}
 
+		if(isValidateName && isValidatePhone){
+			return true;
+		}
 
-		return true;
+		return false;
 	}
 
 	CP.OrderStep2Module.prototype.getValue = function () {

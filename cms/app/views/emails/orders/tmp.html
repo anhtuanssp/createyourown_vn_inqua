@@ -85,11 +85,11 @@
         clear: both;
     }
     #order-detail-table{
-      border : 1px solid #c9c9c9;
+    	border : 1px solid #c9c9c9;
     }
     #order-detail-table td{
-      padding : 10px;
-      border : 1px solid #c9c9c9;
+    	padding : 10px;
+    	border : 1px solid #c9c9c9;
     }
     /*################################################*/
     /*IPAD STYLES*/
@@ -369,7 +369,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <!-- #tmp HINH DON HANG -->
-                                                                        </div><img src="{{$img}}" alt="" border="0" width="180" style="display:block; border:none; outline:none; text-decoration:none;" />
+                                                                        </div><img src="{{$img}}" alt="" border="0" width="180" height="180" style="display:block; border:none; outline:none; text-decoration:none;" />
                                                                     </div>
                                                                 </td>
                                                             </tr>
@@ -422,21 +422,25 @@
                                                                     <div class="buttonbg">
                                                                     </div>
 
-                                                                    <table height="30" align="left" valign="middle" id="order-detail-table" cellpadding="0" cellspacing="0" class="tablet-button" style=" border : 1px solid #c9c9c9;border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip: padding-box;font-size:13px; font-family:Helvetica, arial, sans-serif; text-align:center;  color:#000; font-weight: 300; padding-left:18px; padding-right:18px;text-align:left">
+                                                                    <table height="30" align="left" valign="middle" id="order-detail-table" cellpadding="0" cellspacing="0" class="tablet-button" style="border-top-left-radius:4px; border-bottom-left-radius:4px;border-top-right-radius:4px; border-bottom-right-radius:4px; background-clip: padding-box;font-size:13px; font-family:Helvetica, arial, sans-serif; text-align:center;  color:#000; font-weight: 300; padding-left:18px; padding-right:18px;text-align:left">
                                                                         <tbody>
                                                                             <tr>
                                                                                 <tr>
-                                                                                    <td style=" border : 1px solid #c9c9c9;padding:10px">Tên người đặt hàng </td>
-                                                                                    <td style=" border : 1px solid #c9c9c9;padding:10px">{{$name}} </td>
+                                                                                    <td>Tên người đặt hàng </td>
+                                                                                    <td>{{$name}} </td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td style=" border : 1px solid #c9c9c9;padding:10px">Email </td>
-                                                                                    <td style=" border : 1px solid #c9c9c9;padding:10px">{{$email}}</td>
+                                                                                    <td>Email </td>
+                                                                                    <td>{{$email}}</td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                  <td style=" border : 1px solid #c9c9c9;padding:10px">Phone</td>
-                                                                                  <td style=" border : 1px solid #c9c9c9;padding:10px">{{$phone}}</td>
+                                                                                	<td>Phone</td>
+                                                                                	<td>{{$phone}}</td>
 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                	<td>Giá</td>
+                                                                                	<td>500000</td>
                                                                                 </tr>
                                                                             </tr>
                                                                         </tbody>
