@@ -101,7 +101,8 @@
 		updateProfileUser : 'updateProfileUser',
 		getAssetMediaByLimit : 'getAssetMediaByLimit',
 		getAssetsMediaByIds  : 'getAssetsMediaByIds',
-		addCountAssetMedia : 'addCountAssetMedia'
+		addCountAssetMedia : 'addCountAssetMedia',
+		uploadSharePhoto : 'uploadSharePhoto'
 	}
 	//namespace
 	MYLIB.namespace('CP');

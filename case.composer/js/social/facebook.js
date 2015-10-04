@@ -90,8 +90,9 @@ CP.FacebookService.prototype.shareUI = function(url, img, msg, caption) {
         link: url,
         caption: caption,
         picture: img,
+        display: 'popup',
     }, function(response) {
-
+        console.log(response);
     });
 
 }

@@ -41,4 +41,15 @@
 		return ajax;
 	}
 
+	CP.FacebookServiceTracking.prototype.uploadSharePhoto = function(data){
+		var ajax = $.ajax({
+			url : MYLIB.HOST+MYLIB.SERVICENAME.uploadSharePhoto,
+			type: 'POST',
+			contentType : 'application/json',
+			dataType: 'json',
+			data : JSON.stringify(data)
+		});
+		return ajax;
+	}
+
 })(jQuery,window,document)

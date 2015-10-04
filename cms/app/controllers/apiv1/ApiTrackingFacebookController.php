@@ -67,5 +67,21 @@ class ApiTrackingFacebookController extends BaseController {
     	return Response::json($status, 200);
     }
 	
+	public function uploadSharePhoto(){
+		
+		$param = Input::all();
+		// dd($param);
+		$directoryHinhShareFaceboook =  public_path().\Config::get('detr.share_facebook');
+		$sharePhoto = substr($param['share_photo'], strpos($param['share_photo'], ",")+1);
+
+		$base64_img = base64_decode($sharePhoto);
+		$filename = "sharefacebook-".$param['facebook_id'].'-'.time().".png";
+		$isSuccess = file_put_contents($directoryHinhShareFaceboook.$filename, $base64_img);
+		chmod($directoryHinhShareFaceboook.$filename, 0755);
+
+		return Response::json(array("url" => \Config::get('detr.share_facebook').$filename), 200);
+
+
+	}
 
 }
