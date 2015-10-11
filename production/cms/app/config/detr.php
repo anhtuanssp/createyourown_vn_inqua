@@ -13,6 +13,7 @@ return array(
 	'order_assets'=>'/uploads/ordersassets/',
 	'order_tmp_json'=>'/uploads/orderjson/',
 	'uploads'=>'/uploads/',
+	'share_facebook'=>'/uploads/sharefacebook/',
 	//EVENT NAME
 	'event_detr' => array(
 		'event_sentmail_order' => 'event_sentmail_order', 

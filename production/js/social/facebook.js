@@ -98,6 +98,7 @@ CP.FacebookService.prototype.shareUI = function (url,img,msg,caption){
 	  link: url,
 	  caption: caption,
 	  picture : img,
+	  display :'popup',
 	}, function(response){
 			// if (!response || response.error) {
 		 //    	alert('Error occured');

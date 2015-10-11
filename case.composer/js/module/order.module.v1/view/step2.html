@@ -1,103 +1,108 @@
 <script id="order-step2-template-module" type="text/x-handlebars-template">
-<div>
-
-	<h3 class="title-order-step text-center title-style-1"><b>STEP 2 : Phương thức thanh toán</b></h3>
-	<span class="back"><i class="fa fa-angle-left fa-2x"></i></span>
-
-	<div class="col-xs-6 ">
-		<div class="left-user form-option-checkout">
-
-			<span class="title-style-1"> 
+    <div>
+        <h3 class="title-order-step text-center title-style-1"><b>STEP 2 : Phương thức thanh toán</b></h3>
+        <span class="back"><i class="fa fa-angle-left fa-2x"></i></span>
+        <div class="col-xs-6 ">
+            <div class="left-user form-option-checkout">
+                <span class="title-style-1"> 
 				<img src="imgs/theme/giaohang.png" alt="">
 				Chọn phương thức thanh toán và giao hàng
 			</span>
-
-			 <div class="form-group">
-			    <label for="">Phương thức thanh toán</label> 
-			    <select name="how-to-pay" class="how-to-pay">
-			    	<option value="Nhận hàng chuyển tiền">Nhận hàng chuyển tiền</option>
-			    	<option value="Chuyển khoản ngân hàng">Chuyển khoản ngân hàng</option>
-			    </select>
-			 </div>
-
-			<div class="form-group">
-			    <label for="">Tên người nhận hàng</label> <br>
-			    <input type="text" class="input block ten-nguoi-nhan" placeholder="Tên người nhận hàng">
-			    <span class="require"></span>
-			    <span class="error label label-warning"></span>
-			</div>
-
-			<div class="form-group">
-			    <label for="">Số Phone người nhận hàng</label> <br>
-			    <input type="text" class="input block phone_nguoi_nhan" name="" value="" placeholder="Điện thoại người nhận hàng">
-			    <span class="require"></span>
-			    <span class="error label label-warning"></span>
-			</div>
-
-			<div class="form-group">
-			    <label for="">Địa chỉ giao hàng</label> <br>
-			    <textarea class="dia-chi-giao-hang" name="dia-chi-giao-hang" style="width:100%;min-height:100px">
-
-			    </textarea>
-			</div>
-
-			<div class="form-group">
-				<div class="form-group">
-					<span class="btn btn-primary check-out-submit" title="">
+                <div class="form-group">
+                    <label for="">Phương thức thanh toán</label>
+                    <select name="how-to-pay" class="how-to-pay">
+                        <option value="Nhận hàng chuyển tiền">Nhận hàng chuyển tiền</option>
+                        <option value="Chuyển khoản ngân hàng">Chuyển khoản ngân hàng</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="">Tên người nhận hàng</label>
+                    <br>
+                    <input type="text" class="input block ten-nguoi-nhan" placeholder="Tên người nhận hàng">
+                    <span class="require"></span>
+                    <span class="error label label-warning"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Số Phone người nhận hàng</label>
+                    <br>
+                    <input type="text" class="input block phone_nguoi_nhan" name="" value="" placeholder="Điện thoại người nhận hàng">
+                    <span class="require"></span>
+                    <span class="error label label-warning"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Địa chỉ giao hàng</label>
+                    <br>
+                    <textarea class="dia-chi-giao-hang" name="dia-chi-giao-hang" style="width:100%;min-height:100px">
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <span class="btn btn-primary check-out-submit" title="">
 						Gửi đơn hàng 
 						<i class="fa fa-credit-card fa"></i>
-					</span> 
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="col-xs-6 ">
-		<div class="left-user chuyenkhoan-user hidden">
-			<span class="title-style-1">Thông tin banking của bạn <small>(Vui lòng nhập đúng số tài khoản để chúng tôi dễ kiểm tra, cũng như giao hàng chính xác cho bạn.)</small></span>
-			 <div class="form-group">
-			   	<input type="text" class="input block bankingaccount" name="" value="" placeholder="Số Tài Khoản Ngân Hàng">
-			   	<input type="text" class="input block bankingname" name="" value="" placeholder="Tên Ngân Hàng">
-			   	<input type="text" class="input block banking_noidung" name="" value="" placeholder="Nội dung lời nhắn">
-			 </div>
-		</div>
-		<div class="left-user">
-			<span class="title-style-1">Thông tin khác</span>
-			 <div class="form-group">
-			    <input type="checkbox" class="share-member" >
-		    	<label for="">Chia sẽ tác phẩm của bạn cho các thành viên khác</label>
-			 </div>
-		</div>
-		<div class="left-user bank-info">
-			<legend>THÔNG TIN TÀI KHOẢN CỦA SHOP</legend>
-
-			<div class="media">
-
-		      <div class="media-left">
-
-		        <a href="#">
-
-		          <img class="media-object" src="imgs/bank/tienphongbank.png">
-
-		        </a>
-
-		      </div>
-
-		      <div class="media-body">
-
-		        <h5 class="media-heading"><b>TIÊN PHONG BANK</b></h5>
-
-				<span class="block">Chủ tài khoản : TRƯƠNG ANH TUẤN</span>
-				<span class="block">Số tài khoản : 0043 6839 001</span>
-				<span class="block">Ngân hàng giao dịch TPBANK Tô Hiến Thành</span>
-
-		      </div>
-
-		    </div>
-
-		</div>
-	</div>
-
-</div>
+					</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="left-user chuyenkhoan-user hidden">
+                <span class="title-style-1">Thông tin banking của bạn <small>(Vui lòng nhập đúng số tài khoản để chúng tôi dễ kiểm tra, cũng như giao hàng chính xác cho bạn.)</small></span>
+                <div class="form-group">
+                    <input type="text" class="input block bankingaccount" name="" value="" placeholder="Số Tài Khoản Ngân Hàng">
+                    <input type="text" class="input block bankingname" name="" value="" placeholder="Tên Ngân Hàng">
+                    <input type="text" class="input block banking_noidung" name="" value="" placeholder="Nội dung lời nhắn">
+                </div>
+            </div>
+            <div class="left-user">
+                <span class="title-style-1">Thông tin khác</span>
+                <div class="form-group">
+                    <input type="checkbox" class="share-member">
+                    <label for="">Chia sẽ tác phẩm của bạn cho các thành viên khác</label>
+                </div>
+            </div>
+            <div class="left-user bank-info">
+                <legend>THÔNG TIN TÀI KHOẢN CỦA SHOP</legend>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="imgs/bank/tienphongbank.png">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading"><b>TIÊN PHONG BANK</b></h5>
+                        <span class="block">Chủ tài khoản : TRƯƠNG ANH TUẤN</span>
+                        <span class="block">Số tài khoản : 0043 6839 001</span>
+                        <span class="block">Ngân hàng giao dịch TPBANK Cộng Hòa TP.HCM</span>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="imgs/bank/da.png">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading"><b>ĐÔNG Á BANK</b></h5>
+                        <span class="block">Chủ tài khoản : DƯƠNG THỊ HUYỀN TRANG</span>
+                        <span class="block">Số tài khoản : 0105 366 485</span>
+                        <span class="block">Ngân hàng giao dịch ĐÔNG Á BANK TPHCM</span>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="imgs/bank/vcb.jpg">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading"><b>VIETCOMBANK</b></h5>
+                        <span class="block">Chủ tài khoản : DƯƠNG THỊ HUYỀN TRANG</span>
+                        <span class="block">Số tài khoản : 0105 366 485</span>
+                        <span class="block">Ngân hàng giao dịch VIETCOMBANK TPHCM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </script>

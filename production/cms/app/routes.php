@@ -169,6 +169,7 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.api_v1','after' =>'co
     Route::resource('fakeServiceTest1', 'apiv1\ApiTrackingFacebookController@create');
     Route::resource('getUserProfile','apiv1\ApiTrackingFacebookController@getUserProfile');
     Route::resource('updateProfileUser','apiv1\ApiTrackingFacebookController@updateProfileUser');
+    Route::resource('uploadSharePhoto','apiv1\ApiTrackingFacebookController@uploadSharePhoto');
 
 });
 
