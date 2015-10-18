@@ -12,8 +12,8 @@
 	<!-- SEO -->
 	
 	<!-- AUTHOR -->
-	<meta name="copyright" content="﻿﻿TEAM DETROOPERS" >
-	<meta name="author" content="http://detroopers.com/" >
+	<meta name="copyright" content="﻿﻿Inqua.vn" >
+	<meta name="author" content="http://inqua.vn/" >
 	<!-- AUTHOR -->
 
 	<meta name="robots" content="noodp,index,follow" >
@@ -261,6 +261,34 @@
 		</div>
 
 	</div>
+
+	
+	<!-- SHARE POSTCARD-->
+	<div class="container_CP" style="margin-top:10px;padding:20px">
+		<div class="">
+			<div class="media">
+				<a class="pull-left" href="#">
+					<img class="media-object" src="imgs/banner/share.PNG" alt="Share postcard lên facebook">
+				</a>
+				<div class="media-body">
+					<h2 class="media-heading">Share postcard cho người thân</h2>
+					<p>
+						Sau khi đặt hàng bạn có thể share món quà của bạn cho người thân qua facebook như một tấm thiệp điện tử, 
+						bạn có thể tùy chỉnh lời chúc, tag bạn bè trên facebook.
+					</p>
+					<p>
+						<blockquote cite="">
+							Chỉ cần ý tưởng chúng tôi sẽ giúp bạn
+						</blockquote>
+					</p>	
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">
+			
+		</div>
+	</div>
+	<!-- SHARE POSTCARD-->
 	
 	<div class="main-thietkemau" style="margin-top:5px;position:relative">
 
@@ -316,32 +344,6 @@
 	</div>
 	<!-- END STEP ORDER INSTRUCTION -->
 
-	<!-- SLIDER FEATURE PICTURE -->
-	<div class="container_CP" style="margin-top:10px">
-		<div class="sologan text-center">
-			<h2>Chia sẻ tác phẩm của bạn với chúng tôi</h2>
-			<span>Chỉ cần upload hình ảnh, tự design riêng theo cách của mình, chúng tôi sẽ giúp bạn</span>
-		</div>
-		<div class="slider-home my-slide">
-			<div class="slider1">
-				<div class="slide"><img src="imgs/slide/15.png"></div>
-				<div class="slide"><img src="imgs/slide/8.png"></div>
-				<div class="slide"><img src="imgs/slide/2.png"></div>
-				<div class="slide"><img src="imgs/slide/3.png"></div>
-				<div class="slide"><img src="imgs/slide/5.png"></div>
-				<div class="slide"><img src="imgs/slide/6.png"></div>
-				<div class="slide"><img src="imgs/slide/7.png"></div>
-				<div class="slide"><img src="imgs/slide/1.png"></div>
-				<div class="slide"><img src="imgs/slide/2.png"></div>
-				<div class="slide"><img src="imgs/slide/4.png"></div>
-				<div class="slide"><img src="imgs/slide/16.png"></div>
-				<div class="slide"><img src="imgs/slide/17.png"></div>
-				<div class="slide"><img src="imgs/slide/18.png"></div>
-			</div>
-
-		</div>
-	</div>
-	<!-- END SLIDER PICTURE -->
 
 	<!-- FOOTER -->
 	<div id="footer" class="container_CP">
@@ -359,7 +361,7 @@
 		</div>
 		<div class="clearfix"></div>
 		<div class="copy-right">
-			<a href="detroopers.com">Sản phẩm thuộc bản quyền của detropers.com</a>
+			<a href="detroopers.com">Sản phẩm thuộc bản quyền của inqua.vn</a>
 		</div>
 		<div class="clearfix"></div>
 		<ul class="info-dev">
@@ -390,6 +392,8 @@
 	<script src="js/mylib_util.js"></script>
 	<script src="class/myText.js"></script>
 
+	<script src="libs/jquery.waypoints.min.js"></script>
+	<script src="libs/bootstrap-notify-master/bootstrap-notify.min.js"></script>
 	<!-- SERVICE -->
 	<script src="js/service/product.js"></script>
 	<script src="js/service/orders.js"></script>
@@ -410,6 +414,7 @@
 	<script src="js/module/popup.js"></script>
 	<script src="js/popup.banner.module/banner.js"></script>
 	<script src="js/sticker.module/sticker.modue.js"></script>
+	<script src="js/page/home.js"></script>
 
 
 	<script type="text/javascript">
@@ -435,74 +440,6 @@
     	});
 
 
-	</script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$('.slider1').bxSlider({
-			    slideWidth: 150,
-			    minSlides: 5,
-			    maxSlides: 6,
-			    slideMargin: 20
-			  });
-			$('.banner-started .banner-slide').bxSlider({
-				controls : false,
-				pager : false,
-				auto : true,
-			    autoStart : true,
-			    minSlides: 1,
-			    maxSlides: 1,
-			    slideMargin: 10
-			  });
-
-			var demoPP = new popupAnimator('card').bindEvent();
-
-			$('#feedback').click(function(event) {
-				demoPP.animationCard();
-			});
-
-			$('#form-feedback').submit(function(event) {
-				/* Act on the event */
-				event.preventDefault();
-
-				var email = $(this).find('input[name=email]').val();
-				var content =  $.trim($(this).find('textarea[name=content]').val());
-				if(!CP.Validate.checkEmail(email)){
-					alert('Email bạn nhập chưa đúng!');
-					return;
-				}
-				if (content == '' ) {
-					alert('Bạn phải nhập nội dung trước khi gửi, không được nhiều hơn 500 ký tự');
-					return;
-				};
-
-				var formdata = {
-					email : email,
-					content : content
-				}
-				
-				var ajaxResult = new CP.FeedbackService()
-									.setParam( formdata )
-									.sendFeedback();
-			
-				MYLIB.LOADING_LITTLE(
-							$('#form-feedback'),
-							'Đang gửi feedback, vui lòng đợi trong giây lát..');
-
-				ajaxResult.done(function(res){
-					alert('Gửi thành công!');
-					MYLIB.REMOVE_LOADING_LITTLE($('#form-feedback'));
-					demoPP.hide();
-				});
-				ajaxResult.fail(function(res){
-					alert('Có lỗi xảy ra, mong bạn thông cảm và gửi lại sau!');
-					MYLIB.REMOVE_LOADING_LITTLE($('#form-feedback'));
-					demoPP.show();
-				})
-
-
-			});
-		});	
 	</script>
 	<!-- GOOGLE ANALYTICS -->
 	<script>
