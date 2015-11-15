@@ -1,53 +1,7 @@
 ;
 (function($, window, document, undefined) {
 
-    CP.StickerPopupProduct = function(parentScope) {
-        this.parentScope = parentScope
-    }
-
-    MYLIB.extend(CP.StickerPopupProduct, CP.PopupModule);
-
-    CP.StickerPopupProduct.prototype.init = function() {
-
-        this.titlePopup = 'Chọn sản phẩm để add template vào';
-
-        this.parent.proto.init.call(this);
-        var that = this;
-
-        var service = new CP.productSerice();
-        var ajax = service.getProducts(20);
-        ajax.done(function(res) {
-            console.table(res);
-
-            $.each(res.products, function(index, val) {
-
-                var param = {
-                    'id': val.product_id,
-                    'type': 'case',
-                    'name': val.product_name
-                }
-                var href = CP_LINK.url.design + MYLIB.createUrl(param);
-                var tmp = '<div style="width:200px;display:inline-block;margin:20px;text-align:center">' +
-                    '<a href="' + href + '"><span>{1}</span></a>' +
-                    '<img class="img-responsive thumbnail" src="{0}" /> </div>';
-                tmp = $(tmp.format(MYLIB.IMAGEHOST + val.product_img_thumb, val.product_name));
-                tmp.bind('click', param, function(event) {
-                    that.parentScope.moveToDesignPage(event.data);
-                });
-
-                that.$elContent.append(tmp);
-            });
-
-
-
-        })
-
-        this.$el.appendTo('body');
-
-        return this;
-    };
-
-    CP.StickerModuleAssetCate = function(parentScope) {
+    CP.StickerModuleAssetDesign = function(parentScope) {
         this.tmp = '<div class="col-sm-12 assetmedia-cates-wrapper">' +
             '<div class="row">' +
             '<ul class="row assetmedia-cates-list">' +
@@ -62,7 +16,6 @@
         this.init = function(successCallback) {
             var that = this;
             this.ajaxData.done(function(res) {
-                console.table(res)
                 var tmpA = $(that.tmp);
                 $.each(res.assets, function(index, val) {
                     var li = $('<li style="display:inline-block;margin:5px;cursor:pointer">' + val.asset_name + '</li>');
@@ -90,7 +43,7 @@
         this.$elMediaContent = null;
         this.$elBtnChonsanpham = null;
         this.$elTmpAS = null;
-        this.viewPath = MYLIB.mainUrl + 'js/sticker.module/view/template.html';
+        this.viewPath = MYLIB.mainUrl + 'js/module/popup.module/popup.module.asset.v2/view/template.html';
         this.limit = 24;
         this.current_page = 1;
         this.last_page = 0;
@@ -101,10 +54,7 @@
 
         this.cateID = 'all';
 
-        this.popupProduct = new CP.StickerPopupProduct(this);
-        this.popupProduct.init();
-
-        this.assetCateModule = new CP.StickerModuleAssetCate(this);
+        this.assetCateModule = new CP.StickerModuleAssetDesign(this);
         this.assetCateModule.init(this.renderAssetCate.bind(this));
 
         this.listAssetMediaChoice = [];
@@ -131,22 +81,6 @@
 
     }
 
-    CP.StickerModule.prototype.moveToDesignPage = function(param) {
-        var as = (function(module) {
-            var s = '';
-            $.each(module.listAssetMediaChoice, function(index, val) {
-
-                if (index == module.listAssetMediaChoice.length - 1) {
-                    s += val.id;
-                } else {
-                    s += val.id + ',';
-                }
-            });
-            return s;
-        })(this)
-        param.assetmedia = as;
-        window.location = CP_LINK.url.design + MYLIB.createUrl(param);
-    }
 
     CP.StickerModule.prototype.loadTemplate = function(success) {
 
@@ -245,8 +179,8 @@
     CP.StickerModule.prototype.renderPagination = function() {
 
 
-              if (this.current_page > 1 && this.current_page < this.last_page) {
-           // console.log(1);
+        if (this.current_page > 1 && this.current_page < this.last_page) {
+
             this.$prev.removeClass('disable').css({
                 opacity: '1',
                 cursor: 'pointer'
@@ -264,15 +198,14 @@
                 .unbind('click')
                 .bind('click', this.nextAction.bind(this));
         } else if (this.current_page == 1 && this.last_page == 1) {
-            // console.log(2);
+
             this.$prev.addClass('disable').css({
                 opacity: '0.5',
                 cursor: 'default'
             });
-
             this.$next.removeClass('disable').css({
-                opacity: '0.5',
-                cursor: 'default'
+                opacity: '1',
+                cursor: 'pointer'
             });
 
             this.$prev
@@ -281,10 +214,10 @@
 
             this.$next
                 .unbind('click')
-                // .bind('click', this.nextAction.bind(this));
+                .bind('click', this.nextAction.bind(this));
 
         } else if (this.current_page == this.last_page) {
-            // console.log(3);
+
             this.$prev.removeClass('disable').css({
                 opacity: '1',
                 cursor: 'pointer'
@@ -301,7 +234,7 @@
                 .unbind('click')
 
         } else if (this.current_page == 1) {
-            // console.log(4);
+
             this.$prev.addClass('disable').css({
                 opacity: '0.5',
                 cursor: 'default'
@@ -352,11 +285,11 @@
 
     }
 
-    //IMPLEMENT
-    var sticker = new CP.StickerModule();
-    sticker.init(function() {
-        $('#asset-media').append(sticker.$el)
-    })
+    // //IMPLEMENT
+    // var sticker = new CP.StickerModule();
+    // sticker.init(function() {
+    //     $('#asset-media').append(sticker.$el)
+    // })
 
 
 })(jQuery, window, document)
