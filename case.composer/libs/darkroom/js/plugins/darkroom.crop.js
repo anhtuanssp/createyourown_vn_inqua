@@ -442,7 +442,7 @@
 
         // Update canvas size
         // canvas.setWidth(width);
-        canvas.setHeight(height);
+        // canvas.setHeight(height);
 
         // Add image
         _this.darkroom.image.remove();
@@ -468,7 +468,7 @@
         top: this.cropZone.getTop()+5,
         width: this.cropZone.getWidth()-10,
         height: this.cropZone.getHeight()-10,
-        multiplier: 5
+        multiplier: 4
       });
     },
 

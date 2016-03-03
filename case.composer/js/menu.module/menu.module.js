@@ -69,7 +69,7 @@
             } else {
                 that.tinyIcon = $('<span class="fa fa-bars" style="font-size: 20px;color: #fff;width: 20px;margin: 0 auto; display: block;margin-top: 5px;text-align: left;cursor: pointer;"></span>');
                 that.tinyIcon.bind('click', function(event) {
-					that.menuPhuchoi();
+                    that.menuPhuchoi();
                 });
                 that.$el.parent().append(that.tinyIcon);
             }
