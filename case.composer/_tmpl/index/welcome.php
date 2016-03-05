@@ -22,7 +22,7 @@
 
 				<div class="inphorapy-inqua">
 					<a href="/thiet-ke-mau.html" title="Thiết kế mẫu - Inqua.vn - In ly sứ - In logo doanh nghiệp">
-						<img src="/imgs/banner/logo-banner.png" alt="Thiết kế mẫu - Inqua.vn - In ly sứ - In logo doanh nghiệp">
+						<img src="./imgs/banner/logo-banner.png" alt="Thiết kế mẫu - Inqua.vn - In ly sứ - In logo doanh nghiệp">
 					</a>
 				</div>
 
