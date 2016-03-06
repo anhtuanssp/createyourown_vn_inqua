@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<?php include './_tmpl/mainconfig.php' ?>
 	<?php include './_tmpl/ctrl/index_ctrl.php'; ?>
 	<?php include './_tmpl/ctrl/heart.php'; ?>
 
@@ -15,7 +15,7 @@
 	<?php include './_tmpl/libs_css.php'; ?>
 
 	<!-- Main script for entry page & very important -->
-	<script src="build/mylib.min.js"></script>
+	<script src="<?php echo $CONST_ENV["host_$env"] ?>build/mylib.min.js"></script>
 	
 	<!-- main confg & verry important -->
 	<?php include './_tmpl/config.php'; ?>

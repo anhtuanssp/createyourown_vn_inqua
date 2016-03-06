@@ -3,7 +3,7 @@
 	<div class="container_CP" id="nav-menu">
 		
 		<h1 class="logo">
-			<a href="index.html">
+			<a href="index.php">
 				<span style="display:inline-block;margin: 0px -7px 0px 0px;">C</span>
 				<span  style="display:inline-block;margin: 0px -7px 0px 0px;">r</span>
 				<span  style="display:inline-block;margin: 0px -7px 0px 0px;">e</span>

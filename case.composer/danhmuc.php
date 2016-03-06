@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php include './_tmpl/mainconfig.php' ?>
 	<?php include './_tmpl/ctrl/danhmuc_ctrl.php'; ?>
 	<?php include './_tmpl/ctrl/heart.php'; ?>
 
