@@ -19,7 +19,17 @@
 				"http://inqua.vn/imgs/banner/logo-banner.png"
 				);
 			break;
-		
+		case 'danhmuc' : 
+
+			updateSeo(
+				"Danh mục sản phẩm inqua.vn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"Danh mục sản phẩm  - Thiết kế ly sứ, In ly sứ - Tự thiết kế ly sứ, In skin vỏ điện thoại Thiết kế áo thun online.",
+				"Danh mục sản phẩm  - inqua.vn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"http://inqua.vn/",
+				"Danh mục sản phẩm  - Thiết kế In ly sứ - Tự thiết kế ly sứ - Quà tặng - In quà tặng",
+				"http://inqua.vn/imgs/banner/logo-banner.png"
+				);
+			break;
 		default:
 			# code...
 			break;

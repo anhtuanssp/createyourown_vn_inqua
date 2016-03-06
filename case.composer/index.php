@@ -14,14 +14,14 @@
 
 	<?php include './_tmpl/libs_css.php'; ?>
 
-	<!-- Main script for entry page -->
+	<!-- Main script for entry page & very important -->
 	<script src="build/mylib.min.js"></script>
 	
 	<!-- main confg & verry important -->
 	<?php include './_tmpl/config.php'; ?>
 
 </head>
-<body class="inqua">
+<body class="inqua <?php echo $namePage; ?>">
 
 	<!-- FB async -->
 	<?php include './_tmpl/fb_ansyc.php'; ?>
@@ -71,6 +71,7 @@
 
 	<!-- MENU -->
 	<script src="js/menu.module/menu.module.js"></script>
+	
 	<script type="text/javascript">
 		var menu = new CP.Mainmenu('#nav-menu');
 		menu.init({
