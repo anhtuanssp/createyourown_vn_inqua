@@ -26,17 +26,17 @@
 			<span class="ion-ios-shuffle relateProduct" ng-click="showPopupRelateProduct(thietkemau.id_product,thietkemau.id)"></span>
 			<span>Mẫu số #{{thietkemau.id}}</span>
 			<br>
-			<span><a href="design.html#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}">
+			<span><a href="design.php#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}">
 				<b>{{thietkemau.ten_vi}}</b></a>
 			</span>
 			<div class="khung-anh">
-				<a href="design.html#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}"><img ng-src="{{hostImg}}{{thietkemau.thumb}}" alt=""></a>
+				<a href="design.php#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}"><img ng-src="{{hostImg}}{{thietkemau.thumb}}" alt=""></a>
 			</div>
 			<div class="meta-btn">
-				<a href="design.html#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}" class="btn btn-default">
+				<a href="design.php#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}" class="btn btn-default">
 					{{thietkemau.price | currency:"đ "}}
 				</a>
-				<a href="design.html#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}" class="btn btn-primary">
+				<a href="design.php#!id={{thietkemau.id_product}}&ref={{thietkemau.id}}" class="btn btn-primary">
 					Chỉnh sửa <i class="ion-ios-color-wand-outline"></i>
 				</a>
 			</div>

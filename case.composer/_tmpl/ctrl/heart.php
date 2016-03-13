@@ -52,6 +52,18 @@
 				"http://inqua.vn/imgs/banner/logo-banner.png"
 				);
 			break;
+		case 'design' : 
+
+			updateSeo(
+				"Design quà tăng theo ý của bạn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"Design quà tăng theo ý của bạn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"Design quà tăng theo ý của bạn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"http://inqua.vn/",
+				"Design quà tăng theo ý của bạn - In quà tặng - In ly sứ giá rẻ - Create your own - Lưu trữ khoảnh khắc",
+				"http://inqua.vn/imgs/banner/logo-banner.png"
+				);
+			break;
+
 		default:
 			# code...
 			break;

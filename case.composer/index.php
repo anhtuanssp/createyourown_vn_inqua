@@ -69,6 +69,8 @@
 	<?php include './_tmpl/libs_service.php'; ?>
 	<!-- SERVICE -->
 
+	<script src="js/tracking.facebook/tracking_fb.js"></script>
+
 	<!-- MENU -->
 	<script src="js/menu.module/menu.module.js"></script>
 	

@@ -3,7 +3,6 @@
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/bootstrap.min.js"></script>
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/tinycolor-0.9.15.min.js"></script>
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/picker-color/js/pick-a-color-1.2.3.min.js"></script>
-	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/picker-color/js/pick-a-color-1.2.3.min.js"></script>
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/fabric.min.js"></script>
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/handlebars-v2.0.0.js"></script>
 	<script src="<?php echo $CONST_ENV["host_$env"] ?>libs/underscore.min.js"></script>

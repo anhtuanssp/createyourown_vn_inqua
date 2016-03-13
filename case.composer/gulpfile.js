@@ -83,5 +83,6 @@ gulp.task('builds', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('inqua',['default','builds']);
 
 

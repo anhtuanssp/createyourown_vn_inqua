@@ -222,9 +222,9 @@
 	MYLIB.namespace('CP_LINK');
 
 	CP_LINK.url = {
-		danhmuc : 'danhmuc.html',
-		sanpham : 'sanpham.html',
-		design : 'design.html'
+		danhmuc : 'danhmuc.php',
+		sanpham : 'sanpham.php',
+		design : 'design.php'
 	}
 
 	CP_LINK.param = {
