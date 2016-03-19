@@ -1,0 +1,72 @@
+@import "variables";
+
+
+%form-base {
+  height: $form-default-height;
+  padding: $form-default-padding;
+  background-color: $form-default-bg-color;
+  border: $form-default-border-width $form-default-border-type $form-default-border-color;
+  border-radius: $border-radius-base;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  @extend %form-base;
+  &:focus {
+    border: $form-default-border-width $form-default-border-type $form-focus-border-color;
+    outline: 0;
+  }
+
+  &.form-danger{
+    border: $form-default-border-width $form-default-border-type $form-danger-border-color;
+  }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  appearance: none;
+}
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+label, legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input {
+  &[type="checkbox"], &[type="radio"] {
+    display: inline;
+  }
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}

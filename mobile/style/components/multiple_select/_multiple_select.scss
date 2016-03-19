@@ -1,0 +1,108 @@
+@import "../variables";
+
+
+%title-effect{
+	background-color: #ffc627;
+	color: #fff;
+}
+
+.multiple-select{
+	.title{
+		background-color: #f4f4f4;
+		border-radius: $border-radius-base;
+		padding: 4px 15px;
+		cursor: pointer;
+		-webkit-transition: background-color 0.2s ease;
+		transition: background-color 0.2s ease;
+		text-transform: lowercase;
+
+		&.active{
+			@extend %title-effect;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: $border-radius-base;
+			border-top-left-radius: $border-radius-base;
+		}
+
+		&:hover{
+			@extend %title-effect;
+		}
+	}
+
+	.title-icon{
+		background-color: #f4f4f4;
+		border-radius: $border-radius-base;
+		padding: 4px 15px;
+		cursor: pointer;
+		-webkit-transition: background-color 0.2s ease;
+		transition: background-color 0.2s ease;
+		text-transform: lowercase;
+		position: relative;
+
+		&.active{
+			@extend %title-effect;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+			border-top-right-radius: $border-radius-base;
+			border-top-left-radius: $border-radius-base;
+		}
+
+		&:hover{
+			@extend %title-effect;
+		}
+
+		.title-content{
+			display: block;
+			width: 95%;
+		}
+
+		i{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
+
+
+	.search-box{
+		margin-bottom: 0.5rem;
+	}
+
+	.search-input{
+		height: 30px;
+		margin-bottom: 0;
+	}
+
+	.content{
+		background-color: #F4F4F4;
+		padding: 10px;
+		border-bottom-right-radius: $border-radius-base;
+		border-bottom-left-radius: $border-radius-base;
+
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.list-item{
+			.mul-item{
+				display: table;
+
+				label{
+					display: table-row;
+
+					.left-element{
+						display: table-cell;
+					}
+
+					.right-element{
+						cursor: pointer;
+						display: table-cell;
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}

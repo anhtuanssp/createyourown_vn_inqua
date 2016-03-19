@@ -255,6 +255,10 @@
 		'pjpeg' : 'image/pjpeg'
 	}
 
+	MYLIB.colors = {
+		main : '#FFEC16'
+	}
+
 	
 })()
 

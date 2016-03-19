@@ -1,0 +1,34 @@
+@import "../variables";
+
+
+.input-icon{
+	border: 1px solid $icon-input-border-color;
+	border-radius: $border-radius-base;
+	position: relative;
+
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="password"]{
+		border: none;
+		margin-bottom: 0;
+		width: 95%;
+
+		&:focus {
+			border: none;
+		}
+	}
+
+	i{
+		position: absolute;
+		top: 10px;
+	}
+
+	&.danger{
+		border: $form-default-border-width $form-default-border-type $form-danger-border-color;
+	}
+
+}

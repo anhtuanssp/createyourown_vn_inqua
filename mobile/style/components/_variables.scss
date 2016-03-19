@@ -1,0 +1,106 @@
+$primary-color: #1EAEDB !default;
+
+
+$border-radius-base: 4px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 3px !default;
+
+//== Base
+$font-family: "Avenir-Roman", "Avenir W02", "Avenir", "Avenir Next", sans-serif;
+$html-font-size: 62.5%;
+$font-color: #808285;
+
+
+//== Grids
+$total-columns: 12 !default;
+$container-width: 100% !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$column-width: 100 / $total-columns !default;
+$column-margin: 4% !default;
+
+
+// =================================== Buttons
+// ###### Default
+$button-default-color: #808285 !default;
+$button-bg-default-color: #f4f4f4 !default;
+$button-default-border-color: #f4f4f4 !default;
+
+//###### Hover & Focus
+$button-default-bg-hover-color: #f4f4f4 !default;
+$button-default-border-hover-color: #f4f4f4 !default;
+
+// ###### Primary
+$button-primary-color: #fff !default;
+$button-bg-primary-color: #ffc627 !default;
+$button-primary-border-color: #ffc627 !default;
+
+//###### Hover & Focus
+$button-primary-bg-hover-color: #ffc627 !default;
+$button-primary-border-hover-color: #ffc627 !default;
+
+// ###### Info
+$button-info-color: #fff !default;
+$button-bg-info-color: #009bde !default;
+$button-info-border-color: #009bde !default;
+
+//###### Hover & Focus
+$button-info-bg-hover-color: #009bde !default;
+$button-info-border-hover-color: #009bde !default;
+
+// ###### Danger
+$button-danger-color: #fff !default;
+$button-bg-danger-color: #ef6860 !default;
+$button-danger-border-color: #ef6860 !default;
+
+//###### Hover & Focus
+$button-danger-bg-hover-color: #ef6860 !default;
+$button-danger-border-hover-color: #ef6860 !default;
+
+// =================================== Links
+// ###### Info
+$link-info-color: #009bde !default;
+
+
+// =================================== Checkbox & Radio Button
+$path-to-sprite: "../images/png/psprite.png";
+
+
+// =================================== Forms
+//
+//## For each of Posiba's form fields, define text, background and border color.
+$form-default-height: 38px;
+$form-default-padding: 6px 10px;
+
+// border
+$form-default-border-width: 1px;
+$form-default-border-type: solid;
+$form-default-border-color: #d1d1d1 !default;
+$form-focus-border-color: #009bde !default;
+
+// background color
+$form-default-bg-color: #fff !default;
+
+// ###### Danger
+$form-danger-border-color: #ef6860 !default;
+
+//== Misc
+//
+//## For skeleton's table, define border color
+$misc-border-color: #E1E1E1;
+
+
+//== Tag
+//
+//## For skeleton's tag, define border color
+$tag-default-bg: #d1d1d1;
+$tag-primary-bg: #ffc627;
+$tag-info-bg: #009bde;
+$tag-danger-bg: #ef6860;
+
+
+//== Tag Input
+$tag-input-border-color: #D1D1D1;
+
+//== Icon Input
+$icon-input-border-color: #D1D1D1;

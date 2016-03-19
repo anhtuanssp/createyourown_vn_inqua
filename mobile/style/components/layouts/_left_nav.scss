@@ -1,0 +1,25 @@
+@import "variables_layout1";
+
+
+.left-nav{
+	background-color: $main-color;
+	color: #fff;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 54px;
+	position: relative;
+
+	.menu-box{
+		background-color: $main-color;
+		position: fixed;
+		left: 0;
+		width: 54px;
+		height: 100%;
+	}
+
+	.menu-items{
+		position: absolute;
+		height: 100%;
+	}
+}

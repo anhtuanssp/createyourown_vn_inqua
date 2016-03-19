@@ -16,9 +16,9 @@
 						'<div class="panel-body">'+
 							// '<span class="save-canvas btn btn-default btn-tron"><i class="fa fa-save"></i></span>'+
 							'<span class="tool-delete btn btn-danger  btn-tron"><i class="fa fa-trash"></i></span>'+
-							'<span class="tool-duplicate btn btn-default  btn-tron">Copy</span>'+
-							'<span class="tool-up-to-front btn btn-default  btn-tron"><i class=" fa fa-angle-double-up"></i></span>'+
-							'<span class="tool-down-to-back btn btn-default  btn-tron"><i class=" fa fa-angle-double-down"></i></span>'+
+							'<span class="tool-duplicate btn btn-default  btn-tron"><i class="fa fa-copy"></i></span>'+
+							'<span class="tool-up-to-front btn btn-default  btn-tron" title="dịch chuyển lên trên"><i class="fa fa-arrow-circle-up"></i></span>'+
+							'<span class="tool-down-to-back btn btn-default  btn-tron" title="dịch chuyển xuống dưới"><i class="fa fa-arrow-circle-down"></i></span>'+
 						'</div>'+
 					'</div>';
 		this.$el = $(this.html);

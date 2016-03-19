@@ -1,0 +1,31 @@
+.tags-input{
+	border: 1px solid $tag-input-border-color;
+	border-radius: $border-radius-base;
+	padding: 0 5px 5px 5px;
+	line-height: 22px;
+	vertical-align: middle;
+	cursor: text;
+
+	.tag{
+		float: left;
+		margin-top: 5px;
+	}
+
+	.tag-input{
+		background-color: transparent;
+		margin-bottom: 0;
+		line-height: 22px;
+		height: auto;
+		width: auto;
+		padding: 0;
+		border: 0;
+		outline: none;
+		max-width: inherit;
+		box-sizing: border-box;
+
+		&:focus{
+			border: 0;
+		}
+	}
+	
+}

@@ -1,0 +1,25 @@
+@import "header";
+@import "footer";
+@import "breadcrumb";
+@import "gmenu";
+@import "left_nav";
+
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	margin: 0;
+	font-size: 16px;
+}
+
+.layout1{
+	.main-content{
+		min-height: 100%;
+
+		.container{
+			max-width: none;
+		}
+	}
+}

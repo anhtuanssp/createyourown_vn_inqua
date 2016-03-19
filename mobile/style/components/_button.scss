@@ -1,0 +1,81 @@
+@import "variables";
+
+
+%button-base {
+	display: inline-block;
+	height: 38px;
+	padding: 0 30px;
+	color: $button-default-color;
+	text-align: center;
+	font-size: 16px;
+	line-height: 38px;
+	letter-spacing: 0.2rem;
+	text-transform: lowercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: $button-bg-default-color;
+	border-radius: $border-radius-base;
+	border: 1px solid $button-default-border-color;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.button, 
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"]{
+	@extend %button-base;
+
+	&.button-primary{
+		color: $button-primary-color;
+		background-color: $button-bg-primary-color;
+		border-color: $button-primary-border-color;
+
+		&:hover, &:focus{
+			color: $button-primary-color;
+			background-color: $button-primary-bg-hover-color;
+			border-color: $button-primary-border-hover-color;
+		}
+	}
+
+	&.button-info{
+		color: $button-info-color;
+		background-color: $button-bg-info-color;
+		border-color: $button-info-border-color;
+
+		&:hover, &:focus{
+			color: $button-info-color;
+			background-color: $button-info-bg-hover-color;
+			border-color: $button-info-border-hover-color;
+		}
+	}
+
+	&.button-default{
+		color: $button-default-color;
+		background-color: $button-bg-default-color;
+		border-color: $button-default-border-color;
+
+		&:hover, &:focus{
+			color: $button-default-color;
+			background-color: $button-default-bg-hover-color;
+			border-color: $button-default-border-hover-color;
+		}
+	}
+	&.button-danger{
+		color: $button-danger-color;
+		background-color: $button-bg-danger-color;
+		border-color: $button-danger-border-color;
+
+		&:hover, &:focus{
+			color: $button-danger-color;
+			background-color: $button-danger-bg-hover-color;
+			border-color: $button-danger-border-hover-color;
+		}
+	}
+
+	&.rounded{
+		border-radius: 28px;
+	}
+}
+
+

@@ -1,0 +1,42 @@
+@import "../variables";
+
+
+.tag{
+	background-color: $tag-default-bg;
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: $border-radius-base;
+	margin-right: 5px;
+
+	.tag-content{
+		padding: 0 7px 0 7px;
+	}
+
+	.tag-control{
+		cursor: pointer;
+	}
+
+	&.default{
+		background-color: $tag-default-bg;
+	}
+
+	&.primary{
+		background-color: $tag-primary-bg;
+	}
+
+	&.info{
+		background-color: $tag-info-bg;
+	}
+
+	&.danger{
+		background-color: $tag-danger-bg;
+	}
+
+}

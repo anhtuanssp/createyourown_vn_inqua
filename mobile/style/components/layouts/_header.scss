@@ -1,0 +1,59 @@
+@import "variables_layout1";
+
+.header{
+	.twelve{
+		height: inherit;
+	}
+
+	.logo-brand{
+		float: left;
+		width: 180px;
+		padding: 0 15px;
+		height: 0px;
+		img{
+			width: 170px;
+			height: 40px;
+		}
+	}
+
+	.top-menu{
+		height: $top-menu-height;
+	}
+
+	.menu-items{
+		float: left;
+		height: $top-menu-height;
+		font-size: 1.125em;
+
+		a{
+			color: #b2b0af;
+		}
+
+		ul{
+			list-style: none;
+			margin-top: 0;
+			height: $top-menu-height;
+			padding: 0;
+		}
+
+		li{
+			float: left;
+			height: $menu-item-height;
+			line-height: $top-menu-height;
+			padding: $padding-meny-item;
+			a{
+				text-decoration: none;
+				&:hover{
+					color: $info-color;
+				}
+			}
+			&.active{
+				border-bottom: thick solid $main-color;
+				background-color: $menu-active-item-bg;
+				a{
+					color: #808285;
+				}
+			}
+		}
+	}
+}
