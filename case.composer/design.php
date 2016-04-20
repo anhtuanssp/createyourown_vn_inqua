@@ -52,7 +52,7 @@
 
 
 	<div id="guideTour" class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-sm" style="  transform: translate(0, 80%) !important;
+	  <div class="modal-dialog modal-sm" style="transform: translate(0, 80%) !important;
   						-ms-transform: translate(0, 80%) !important;
   						-webkit-transform: translate(0, 80%) !important;">
 	    <div class="modal-content">

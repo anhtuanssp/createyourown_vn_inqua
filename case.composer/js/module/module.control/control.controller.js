@@ -53,6 +53,26 @@
 		maincanvasModuleCallback.rotateHandle.call(maincanvasModuleCallback,event.data);
 	}
 
+	CP.ControlController.prototype.openPopupFonts = function (event){
+		/**
+		 * Dashboard will handle it
+		 */
+		MYLIB.eventManager.fireEvent(this, MYLIB.eventNames.event_open_font_edit,true);
+	}
+	CP.ControlController.prototype.openPopupEditImgs = function (){
+		/**
+		 * Dashboard will handle it
+		 */
+		MYLIB.eventManager.fireEvent(this, MYLIB.eventNames.event_open_edit_imgs,true);
+	}
+
+	CP.ControlController.prototype.openPopupEditPictures = function(){
+		/**
+		 * Dashboard will handle it
+		 */
+		MYLIB.eventManager.fireEvent(this, 'OPEN_EDIT_PICTURES',true);
+	}
+
 
 	MYLIB.mixin(CP.ControlController, MYLIB.Event.ObserverMixin);
 

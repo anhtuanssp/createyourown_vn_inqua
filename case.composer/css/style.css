@@ -81,7 +81,7 @@ div#app {
 	  min-height: 580px;
 	border : 1px solid #c9c9c9;
 	/*background: url('../imgs/theme/canvas-bg.png');*/
-	background: url('../imgs/theme/transp_bg.png');
+	/*background: url('../imgs/theme/transp_bg.png');*/
 	background-color: #fff
 }
 #app .main-canvas-container .canvas-container{

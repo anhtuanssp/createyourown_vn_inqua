@@ -8,6 +8,11 @@
 		this.rotateRight = null;
 		this.rotateLeft = null;
 
+		this.chooseFont = null;
+
+		this.blendImg = null;
+		this.cropImg = null;
+
 		this.modelService = null;
 		this.init = function (modelService){
 			this.modelService = modelService;
@@ -35,6 +40,9 @@
 		this.$btnZoomOut = this.$el.find('.zoom-out');
 		this.rotateRight = this.$el.find('.rotate-right');
 		this.rotateLeft = this.$el.find('.rotate-left');
+		this.chooseFont = this.$el.find('.choose-font');
+		this.blendImg = this.$el.find('.blend-img');
+		this.cropImg = this.$el.find('.crop-img');
 		// this.$btnRect = this.$el.find('.'+that.modelService.data.rect.class);
 	}
 
@@ -56,6 +64,16 @@
 		this.rotateLeft
 			.unbind('click touchstart')
 			.bind('click touchstart','ROTATELEFT',scopeController.rotateHandle.bind(scopeController));
+
+		this.chooseFont
+			.unbind('click touchstart')
+			.bind('click touchstart', scopeController.openPopupFonts.bind(scopeController));
+
+		this.blendImg
+			.unbind('click touchstart')
+			.bind('click touchstart', scopeController.openPopupEditImgs.bind(scopeController));
+
+		MYLIB.click(this.cropImg,scopeController.openPopupEditPictures.bind(scopeController));
 	}
 
 

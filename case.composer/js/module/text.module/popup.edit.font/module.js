@@ -285,13 +285,13 @@
 
         if(event != undefined && event == true){
             this.$el.find('.toggle-zone-font').hide();
-                        this.$el.modal('show');
-
+            this.$el.modal('show');
+            this.$el.find('.d3-cloud-world').show();
             this.$el.find('.modal-backdrop').height($(window).height()+700);
         }else{
             this.$el.find('.toggle-zone-font').show();
             this.$el.modal('show');
-
+            this.$el.find('.d3-cloud-world').hide();
             this.$el.find('.modal-backdrop').height($(window).height()+700);
         }
         
