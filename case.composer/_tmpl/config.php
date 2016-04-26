@@ -212,6 +212,10 @@
 				font : 'Hipsteria',
 				label : 'Hipsteria',
 				fontWeight : [300]
+			},{
+				font : 'SVN-Bruselo Script',
+				label : 'SVN-Bruselo Script',
+				fontWeight : [300]
 			}
 
 
