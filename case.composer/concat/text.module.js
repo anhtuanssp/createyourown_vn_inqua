@@ -489,7 +489,7 @@
             this.$el.find('.d3-cloud-world').hide();
             this.$el.find('.modal-backdrop').height($(window).height()+700);
         }
-        
+        this.$elSelectV2.find('input[name="fontvalue"]').prop('checked',false)
 
         
     };

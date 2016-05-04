@@ -37,5 +37,26 @@
 @font-face { font-family: Hipsteria; src: url('../../../fonts/Hipsteria.ttf'); }
 @font-face { font-family: SVN-Bruselo Script; src: url('../../../fonts/SVN-Bruselo Script.otf'); }
 
+@font-face { font-family: FS Playlist Caps;src:url('../../../fonts/FS Playlist Caps.otf'); }
 
+@font-face {
+  font-family: 'FS Playlist Caps';
+  src: url('../../../fonts/FS Playlist Caps.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../../fonts/FS Playlist Caps.otf')
+}
+@font-face {
+	font-family: 'SVN-Paris Pro';
+	src : url('../../../fonts/SVN-Paris Pro.otf')
+
+}
+@font-face {
+	font-family: 'SVN-Swashington';
+	src : url('../../../fonts/SVN-Swashington.otf')
+
+}
+
+@font-face {
+  font-family: 'SH Imogen Agnes	';
+  src: url('../../../fonts/SH Imogen Agnes.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 

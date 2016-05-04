@@ -216,6 +216,22 @@
 				font : 'SVN-Bruselo Script',
 				label : 'SVN-Bruselo Script',
 				fontWeight : [300]
+			},{
+				font : 'FS Playlist Caps',
+				label : 'FS Playlist Caps',
+				fontWeight : [300,500]
+			},{
+				font : 'SVN-Paris Pro',
+				label : 'SVN-Paris Pro',
+				fontWeight : [200,300,500]
+			},{
+				font : 'SVN-Swashington',
+				label : 'SVN-Swashington',
+				fontWeight : [200,300,500]
+			},{
+				font : 'SH Imogen Agnes',
+				label : 'SH Imogen Agnes',
+				fontWeight : [200,300,500]
 			}
 
 
